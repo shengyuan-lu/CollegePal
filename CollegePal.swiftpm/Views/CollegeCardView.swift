@@ -17,32 +17,17 @@ struct CollegeCardView: View {
             
             Image(college.photo[0])
                 .resizable()
-
+            
             VStack {
                 
                 VStack(spacing: 2) {
-                    HStack {
-                        Text(college.name)
-                            .bold()
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                        
-                        Spacer()
-                    }
                     
-                    HStack {
-                        Text(college.location)
-                            .font(.body)
-                            .foregroundColor(.white)
-                            .bold()
-                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                        
-                        Spacer()
-                    }
+                    Spacer()
+                    
+                    CollegeCardTitleView(college: college)
+                    
                 }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 12)
+
             }
             
         }

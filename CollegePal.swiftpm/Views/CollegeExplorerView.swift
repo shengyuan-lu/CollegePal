@@ -4,18 +4,45 @@ struct CollegeExplorerView: View {
     
     @ObservedObject var viewModel: CollegeExplorerVM = CollegeExplorerVM()
     
+    @State private var searchText = ""
+    
+    @State private var displayStyle = CollegeExplorerViewOptions.Grid
+    
     var body: some View {
         
-        ScrollView {
+        VStack {
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 350, maximum: 800))], spacing: 16) {
+            Picker("Display Style", selection: $displayStyle) {
+                Text("Grid").tag(CollegeExplorerViewOptions.Grid)
+                    .padding()
+                Text("List").tag(CollegeExplorerViewOptions.List)
+                    .padding()
+            }
+            .pickerStyle(.segmented)
+            
+            
+            if displayStyle == .Grid {
                 
-                ForEach(viewModel.colleges, id: \.name) { college in
-                    CollegeCardView(college: college)
-                        .aspectRatio(5/3, contentMode: .fit)
+                CollegeExploreGridView(colleges: filteredColleges)
+                
+            } else if displayStyle == .List {
+                List(filteredColleges, id: \.name) { college in
+                    Text(college.name)
                 }
             }
-            .padding()
+            
         }
+        .searchable(text: $searchText)
+        .navigationTitle("Explore")
+        .padding()
+        
+        var filteredColleges: [CollegeStruct] {
+            if searchText.isEmpty {
+                return viewModel.colleges
+            } else {
+                return viewModel.colleges.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            }
+        }
+        
     }
 }

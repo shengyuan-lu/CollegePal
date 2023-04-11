@@ -20,6 +20,5 @@ struct CollegeStruct: Decodable {
     let undergraduateEnrollment: Int
     let description: String
     
-    
-    static let example = CollegeStruct(name: "Stanford University", photo: ["stanford1"], location: "Palo Alto, CA", type: "Private 4-Year", setting: "City", topMajors: ["Computer Science", "Business"], tuitionFee: 45000, acceptanceRate: 0.04, graduationRate: 0.95, undergraduateEnrollment: 7000, description: "Example University is a private research university located in New York City. With a diverse student body and top-ranked programs in computer science, biology, and psychology, Example University is a great choice for ambitious students seeking a challenging academic environment.")
+    static let example = CollegeStruct(name: "Example University", photo: ["stanford1"], location: "Palo Alto, CA", type: "Private 4-Year", setting: "City", topMajors: ["Computer Science", "Business"], tuitionFee: 45000, acceptanceRate: 0.04, graduationRate: 0.95, undergraduateEnrollment: 7000, description: "Example University is a private research university located in New York City. With a diverse student body and top-ranked programs in computer science, biology, and psychology, Example University is a great choice for ambitious students seeking a challenging academic environment.")
 }
