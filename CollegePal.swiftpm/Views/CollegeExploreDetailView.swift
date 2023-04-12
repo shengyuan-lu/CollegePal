@@ -23,7 +23,7 @@ struct CollegeExploreDetailView: View {
     
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct CollegeExploreDetailView_Previews: PreviewProvider {
     static var previews: some View {
         CollegeExploreDetailView(college: CollegeStruct.example)
     }

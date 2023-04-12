@@ -20,15 +20,27 @@ struct CollegeExplorerView: View {
                     .padding()
             }
             .pickerStyle(.segmented)
+            .padding(.vertical, 4)
             
-            if displayStyle == .Grid {
+            if filteredColleges.count == 0 {
                 
-                CollegeExploreGridView(colleges: filteredColleges)
+                Spacer()
                 
-            } else if displayStyle == .List {
+                CollegeNotFoundView()
                 
-                CollegeExplorerListView(colleges: filteredColleges)
+                Spacer()
+                
+            } else {
+                if displayStyle == .Grid {
+                    
+                    CollegeExploreGridView(colleges: filteredColleges)
+                    
+                } else if displayStyle == .List {
+                    
+                    CollegeExplorerListView(colleges: filteredColleges)
+                }
             }
+            
             
         }
         .searchable(text: $searchText)

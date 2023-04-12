@@ -12,17 +12,20 @@ struct CollegeExplorerListCellView: View {
     let college: CollegeStruct
     
     var body: some View {
+        
         HStack {
             Image(college.photo[0])
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 150, height: 100)
+                .frame(minWidth: 25, maxWidth: 150, minHeight: 50)
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 .padding(.trailing, 8)
             
             VStack(alignment: .leading) {
+                
                 Text(college.name)
-                    .font(.title)
+                    .font(.title3)
+                    .foregroundColor(.black)
                     .bold()
                 
                 Spacer()
@@ -35,18 +38,18 @@ struct CollegeExplorerListCellView: View {
                             Text("Type")
                                 .bold()
                         }
-                        .font(.title2)
+                        .font(.body)
                         .padding(.bottom, 4)
                         .foregroundColor(.accentColor)
                         
                         Text(college.type)
                             .font(.body)
-                            .bold()
+                            .foregroundColor(.black)
                     }
                     
                     Spacer()
                 }
-
+                
                 
             }
             .padding(.vertical, 8)

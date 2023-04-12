@@ -12,15 +12,20 @@ struct CollegeExplorerListView: View {
     var colleges: [CollegeStruct]
     
     var body: some View {
-        List(colleges, id: \.name) { college in
-            
-            NavigationLink {
-                CollegeExploreDetailView(college: college)
-            } label: {
-                CollegeExplorerListCellView(college: college)
+        
+        ScrollView {
+            ForEach(colleges, id: \.name) { college in
+                
+                NavigationLink {
+                    CollegeExploreDetailView(college: college)
+                } label: {
+                    CollegeExplorerListCellView(college: college)
+                }
+                
             }
-            
         }
+
+        .edgesIgnoringSafeArea(.all)
         .scrollContentBackground(.hidden)
     }
 }

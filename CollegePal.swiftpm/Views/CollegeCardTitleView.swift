@@ -12,12 +12,13 @@ struct CollegeCardTitleView: View {
     let college: CollegeStruct
     
     var body: some View {
-        VStack {
-            HStack {
+        VStack(alignment: .leading) {
+            HStack() {
                 Text(college.name)
                     .bold()
                     .font(.title2)
                     .foregroundColor(.white)
+                    .lineLimit(1)
                     .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                 
                 Spacer()
@@ -34,7 +35,7 @@ struct CollegeCardTitleView: View {
             }
         }
         .padding(16)
-        .background(Color.black.opacity(0.5))
+        .background(Color.black.opacity(0.7))
     }
 }
 
