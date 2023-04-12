@@ -16,8 +16,8 @@ struct CollegeExplorerListCellView: View {
         HStack {
             Image(college.photo[0])
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(minWidth: 25, maxWidth: 150, minHeight: 50)
+                .aspectRatio(4/3, contentMode: .fill)
+                .frame(minWidth: 25, maxWidth: 150, minHeight: 75)
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 .padding(.trailing, 8)
             
@@ -28,34 +28,26 @@ struct CollegeExplorerListCellView: View {
                     .foregroundColor(.black)
                     .bold()
                 
+                Text(college.location)
+                    .font(.body)
+                    .foregroundColor(.black)
+                
                 Spacer()
                 
                 HStack {
                     
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Image(systemName: "graduationcap.fill")
-                            Text("Type")
-                                .bold()
-                        }
-                        .font(.body)
-                        .padding(.bottom, 4)
-                        .foregroundColor(.accentColor)
-                        
-                        Text(college.type)
-                            .font(.body)
-                            .foregroundColor(.black)
-                    }
+                    TagView(text: college.type, foregroundColor: Color.white, backgroundColor: Color.accentColor)
+                    
+                    TagView(text: college.getYearInString(), foregroundColor: Color.white, backgroundColor: Color.purple)
+                    
+                    TagView(text: college.setting, foregroundColor: Color.white, backgroundColor: Color.blue)
                     
                     Spacer()
                 }
                 
-                
             }
-            .padding(.vertical, 8)
-            
         }
-        .padding(8)
+        .padding(.vertical, 8)
     }
 }
 

@@ -22,16 +22,6 @@ struct CollegeCardView: View {
                 
                 VStack(spacing: 2) {
                     
-                    HStack {
-                        
-                        TagView(text: college.type, foregroundColor: Color.white, backgroundColor: Color.accentColor)
-                        
-                        TagView(text: college.setting, foregroundColor: Color.white, backgroundColor: Color.purple)
-                        
-                        Spacer()
-                    }
-                    .padding(12)
-                    
                     Spacer()
                     
                     CollegeCardTitleView(college: college)
