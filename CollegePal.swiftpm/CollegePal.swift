@@ -4,7 +4,7 @@ import SwiftUI
 struct CollegePal: App {
     var body: some Scene {
         WindowGroup {
-            MainNavigation()
+            MainNavigationView()
         }
     }
 }

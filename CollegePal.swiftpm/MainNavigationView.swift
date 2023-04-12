@@ -1,5 +1,5 @@
 //
-//  MainNavigation.swift
+//  MainNavigationView.swift
 //  CollegePal
 //
 //  Created by Shengyuan Lu on 4/11/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainNavigation: View {
+struct MainNavigationView: View {
     var body: some View {
         NavigationView {
             List {
@@ -43,6 +43,6 @@ struct MainNavigation: View {
 
 struct MainNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        MainNavigation()
+        MainNavigationView()
     }
 }

@@ -8,6 +8,7 @@ struct CollegeExplorerView: View {
     
     @State private var displayStyle = CollegeExplorerViewOptions.Grid
     
+
     var body: some View {
         
         VStack {
@@ -20,15 +21,13 @@ struct CollegeExplorerView: View {
             }
             .pickerStyle(.segmented)
             
-            
             if displayStyle == .Grid {
                 
                 CollegeExploreGridView(colleges: filteredColleges)
                 
             } else if displayStyle == .List {
-                List(filteredColleges, id: \.name) { college in
-                    Text(college.name)
-                }
+                
+                CollegeExplorerListView(colleges: filteredColleges)
             }
             
         }

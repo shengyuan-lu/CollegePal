@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  TagView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/11/23.
@@ -21,7 +21,7 @@ struct TagView: View {
             .bold()
             .padding(8)
             .background(backgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
         
     }
 }
