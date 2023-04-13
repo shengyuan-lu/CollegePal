@@ -10,59 +10,82 @@ struct CollegeExplorerView: View {
         
         ScrollView {
             
-            HStack {
+            ScrollView(.horizontal) {
                 
-                VStack {
-                    Text("Type")
-                        .bold()
+                HStack {
                     
-                    Picker("Type", selection: $fm.selectedType) {
-                        ForEach(CollegeTypeFilter.allCases) { setting in
-                            Text(setting.rawValue).tag(setting)
+                    HStack {
+                        Text("Type")
+                            .bold()
+                        
+                        Picker("Type", selection: $fm.selectedType) {
+                            ForEach(CollegeTypeFilter.allCases) { setting in
+                                Text(setting.rawValue).tag(setting)
+                                    .foregroundColor(.white)
+                            }
                         }
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
-                }
-                
-                
-                VStack {
+                    .padding(8)
+                    .padding(.horizontal, 8)
+                    .foregroundColor(.primary)
+                    .background(Color.accentColor.opacity(0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Text("Year")
-                        .bold()
-                    
-                    Picker("Year", selection: $fm.selectedYear) {
-                        ForEach(CollegeYearFilter.allCases) { setting in
-                            Text(String(setting.rawValue)).tag(setting)
+                    HStack {
+                        
+                        Text("Year")
+                            .bold()
+                        
+                        Picker("Year", selection: $fm.selectedYear) {
+                            ForEach(CollegeYearFilter.allCases) { setting in
+                                Text(String(setting.rawValue)).tag(setting)
+                            }
                         }
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
-                }
-                
-                
-                VStack {
+                    .padding(8)
+                    .padding(.horizontal, 8)
+                    .foregroundColor(.primary)
+                    .background(Color.accentColor.opacity(0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Text("Setting")
-                        .bold()
                     
-                    Picker("Setting", selection: $fm.selectedSetting) {
-                        ForEach(CollegeSettingFilter.allCases) { setting in
-                            Text(setting.rawValue).tag(setting)
+                    HStack {
+                        
+                        Text("Setting")
+                            .bold()
+                        
+                        Picker("Setting", selection: $fm.selectedSetting) {
+                            ForEach(CollegeSettingFilter.allCases) { setting in
+                                Text(setting.rawValue).tag(setting)
+                            }
                         }
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
-                }
-                
-                
-                VStack {
-                    Text("Selectivity")
-                        .bold()
+                    .padding(8)
+                    .padding(.horizontal, 8)
+                    .foregroundColor(.primary)
+                    .background(Color.accentColor.opacity(0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Picker("Selectivity", selection: $fm.selectedSelectivity) {
-                        ForEach(CollegeSelectivityFilter.allCases) { setting in
-                            Text(String(setting.rawValue)).tag(setting)
+                    
+                    HStack {
+                        Text("Selectivity")
+                            .bold()
+                        
+                        Picker("Selectivity", selection: $fm.selectedSelectivity) {
+                            ForEach(CollegeSelectivityFilter.allCases) { setting in
+                                Text(String(setting.rawValue)).tag(setting)
+                            }
                         }
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
+                    .padding(8)
+                    .padding(.horizontal, 8)
+                    .foregroundColor(.primary)
+                    .background(Color.accentColor.opacity(0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 
             }
