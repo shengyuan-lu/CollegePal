@@ -13,8 +13,50 @@ struct CollegeExploreDetailView: View {
     
     var body: some View {
         
-        VStack {
-            Text(college.name)
+        VStack(alignment: .leading) {
+            
+            List {
+                
+                
+                Section {
+                    
+                    
+
+                }
+                
+                Section {
+                    
+                    VStack {
+                        Text(college.description)
+                    }
+                    .padding(8)
+                    
+                }
+                
+                
+                Section {
+                    
+                    VStack {
+                        Text(college.getYearInString())
+                        Text(college.getAcceptanceRateInString())
+                        Text(college.getGraduationRateInString())
+                    }
+                    .padding(8)
+                    
+                } header: {
+                    
+                    Text("Data")
+                    
+                }
+
+                Section {
+                    
+
+                    
+                }
+                
+            }
+            
         }
         .navigationTitle(college.name)
         .navigationBarTitleDisplayMode(.large)

@@ -19,7 +19,5 @@ class CollegeExplorerVM: ObservableObject {
         
     }
     
-
-    
     
 }

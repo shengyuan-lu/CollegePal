@@ -23,24 +23,30 @@ struct CollegeExplorerListCellView: View {
             
             VStack(alignment: .leading) {
                 
-                Text(college.name)
-                    .font(.title3)
-                    .foregroundColor(.black)
-                    .bold()
-                
-                Text(college.location)
-                    .font(.body)
-                    .foregroundColor(.black)
-                
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(college.name)
+                        .font(.title3)
+                        .lineLimit(1)
+                        .foregroundColor(.primary)
+                        .bold()
+                    
+                    Text(college.location)
+                        .font(.body)
+                        .lineLimit(1)
+                        .foregroundColor(.primary)
+                }
+
                 Spacer()
                 
                 HStack {
                     
-                    TagView(text: college.type, foregroundColor: Color.white, backgroundColor: Color.accentColor)
-                    
-                    TagView(text: college.getYearInString(), foregroundColor: Color.white, backgroundColor: Color.purple)
-                    
-                    TagView(text: college.setting, foregroundColor: Color.white, backgroundColor: Color.blue)
+                    LazyHGrid(rows: [GridItem(.adaptive(minimum: 25, maximum: 75))]) {
+                        TagView(text: college.type, foregroundColor: Color.white, backgroundColor: Color.accentColor)
+                        
+                        TagView(text: college.getYearInString(), foregroundColor: Color.white, backgroundColor: Color.purple)
+                        
+                        TagView(text: college.setting, foregroundColor: Color.white, backgroundColor: Color.blue)
+                    }
                     
                     Spacer()
                 }
