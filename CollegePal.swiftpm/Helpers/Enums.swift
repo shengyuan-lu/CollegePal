@@ -42,8 +42,8 @@ enum CollegeSettingFilter: String, CaseIterable, Identifiable  {
     
     case AnySetting = "Any"
     case City = "City"
-    case Suburban = "Suburban"
     case Urban = "Urban"
+    case Suburban = "Suburban"
     case Rural = "Rural"
     
     
