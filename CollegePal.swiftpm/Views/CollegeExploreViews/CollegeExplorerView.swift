@@ -2,16 +2,9 @@ import SwiftUI
 
 struct CollegeExplorerView: View {
     
-    @ObservedObject var viewModel: CollegeExplorerVM = CollegeExplorerVM()
+    @ObservedObject var viewModel = CollegeExplorerVM()
     
-    @State private var searchText = ""
-    
-    @State private var selectedType: CollegeTypeFilter = .AnyType
-    @State private var selectedSetting: CollegeSettingFilter = .AnySetting
-    @State private var selectedYear: CollegeYearFilter = .AnyYear
-    @State private var selectedSelectivity: CollegeSelectivityFilter = .AnySelectivity
-
-    @State private var displayStyle = CollegeExplorerViewOptions.Grid
+    @StateObject var fm = FilterManager()
     
     var body: some View {
         
@@ -19,7 +12,7 @@ struct CollegeExplorerView: View {
             
             HStack {
                 
-                Picker("Select a Type", selection: $selectedType) {
+                Picker("Select a Type", selection: $fm.selectedType) {
                     ForEach(CollegeTypeFilter.allCases) { setting in
                         Text(setting.rawValue).tag(setting)
                             .bold()
@@ -27,7 +20,7 @@ struct CollegeExplorerView: View {
                 }
                 .pickerStyle(.menu)
                 
-                Picker("Select a Year", selection: $selectedYear) {
+                Picker("Select a Year", selection: $fm.selectedYear) {
                     ForEach(CollegeYearFilter.allCases) { setting in
                         Text(String(setting.rawValue)).tag(setting)
                             .bold()
@@ -36,7 +29,7 @@ struct CollegeExplorerView: View {
                 .pickerStyle(.menu)
                 
                 
-                Picker("Select a Setting", selection: $selectedSetting) {
+                Picker("Select a Setting", selection: $fm.selectedSetting) {
                     ForEach(CollegeSettingFilter.allCases) { setting in
                         Text(setting.rawValue).tag(setting)
                             .bold()
@@ -45,7 +38,7 @@ struct CollegeExplorerView: View {
                 .pickerStyle(.menu)
                 
                 
-                Picker("Select a Selectivity", selection: $selectedSelectivity) {
+                Picker("Select a Selectivity", selection: $fm.selectedSelectivity) {
                     ForEach(CollegeSelectivityFilter.allCases) { setting in
                         Text(String(setting.rawValue)).tag(setting)
                             .bold()
@@ -64,11 +57,11 @@ struct CollegeExplorerView: View {
                 Spacer()
                 
             } else {
-                if displayStyle == .Grid {
+                if fm.displayStyle == .Grid {
                     
                     CollegeExploreGridView(colleges: filteredColleges)
                     
-                } else if displayStyle == .List {
+                } else if fm.displayStyle == .List {
                     
                     CollegeExplorerListView(colleges: filteredColleges)
                 }
@@ -76,11 +69,11 @@ struct CollegeExplorerView: View {
             
             
         }
-        .searchable(text: $searchText)
+        .searchable(text: $fm.searchText)
         .navigationTitle("Explore")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Picker("Display Style", selection: $displayStyle) {
+                Picker("Display Style", selection: $fm.displayStyle) {
                     Image(systemName: "square.grid.2x2").tag(CollegeExplorerViewOptions.Grid)
                         .padding()
                     Image(systemName: "list.bullet").tag(CollegeExplorerViewOptions.List)
@@ -97,24 +90,24 @@ struct CollegeExplorerView: View {
             
             var currentSelection = viewModel.colleges
             
-            if !searchText.isEmpty {
-                currentSelection = currentSelection.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            if !fm.searchText.isEmpty {
+                currentSelection = currentSelection.filter { $0.name.localizedCaseInsensitiveContains(fm.searchText) }
             }
             
-            if !CollegeTypeFilter.testEqual(lhs: selectedType, rhs: .AnyType) {
-                currentSelection = currentSelection.filter { $0.getCollegeTypeEnum() == selectedType }
+            if !CollegeTypeFilter.testEqual(lhs: fm.selectedType, rhs: .AnyType) {
+                currentSelection = currentSelection.filter { $0.getCollegeTypeEnum() == fm.selectedType }
             }
             
-            if !CollegeYearFilter.testEqual(lhs: selectedYear, rhs: .AnyYear) {
-                currentSelection = currentSelection.filter { $0.getCollegeYearEnum() == selectedYear }
+            if !CollegeYearFilter.testEqual(lhs: fm.selectedYear, rhs: .AnyYear) {
+                currentSelection = currentSelection.filter { $0.getCollegeYearEnum() == fm.selectedYear }
             }
             
-            if !CollegeSettingFilter.testEqual(lhs: selectedSetting, rhs: .AnySetting) {
-                currentSelection = currentSelection.filter { $0.getCollegeSettingEnum() == selectedSetting }
+            if !CollegeSettingFilter.testEqual(lhs: fm.selectedSetting, rhs: .AnySetting) {
+                currentSelection = currentSelection.filter { $0.getCollegeSettingEnum() == fm.selectedSetting }
             }
             
-            if !CollegeSelectivityFilter.testEqual(lhs: selectedSelectivity, rhs: .AnySelectivity) {
-                currentSelection = currentSelection.filter { $0.getCollegeSelectivity() == selectedSelectivity }
+            if !CollegeSelectivityFilter.testEqual(lhs: fm.selectedSelectivity, rhs: .AnySelectivity) {
+                currentSelection = currentSelection.filter { $0.getCollegeSelectivity() == fm.selectedSelectivity }
             }
             
             return currentSelection
