@@ -9,24 +9,20 @@ import SwiftUI
 
 struct MainNavigationView: View {
     
-    @State private var showIntro = false
-    
     var body: some View {
         
         NavigationView {
             
             List {
                 
-                Section {
+                Section(header: Text("Introduction")) {
                     
-                    NavigationLink(destination: IntroductionView(), isActive: $showIntro) {
+                    NavigationLink(destination: IntroductionView()) {
                         Label("Introduction", systemImage: "arrow.forward.circle")
                     }
                     
-                } header: {
-                    Text("Introduction")
                 }
-
+                
                 Section(header: Text("Explore")) {
                     NavigationLink(destination: CollegeExplorerView()) {
                         Label("Explore Colleges", systemImage: "globe.desk")
@@ -34,24 +30,22 @@ struct MainNavigationView: View {
                 }
                 
                 Section(header: Text("Find My Fit")) {
-
+                    
                     
                 }
                 
                 Section(header: Text("Submit")) {
-
+                    
                     
                 }
                 
                 Section(header: Text("About")) {
-
+                    
                     
                 }
             }
             .navigationTitle("CollegePal")
-            .onAppear {
-                self.showIntro = true
-            }
+            
         }
     }
 }

@@ -8,45 +8,65 @@ struct CollegeExplorerView: View {
     
     var body: some View {
         
-        VStack {
+        ScrollView {
             
             HStack {
                 
-                Picker("Select a Type", selection: $fm.selectedType) {
-                    ForEach(CollegeTypeFilter.allCases) { setting in
-                        Text(setting.rawValue).tag(setting)
-                            .bold()
+                VStack {
+                    Text("Type")
+                        .bold()
+                    
+                    Picker("Type", selection: $fm.selectedType) {
+                        ForEach(CollegeTypeFilter.allCases) { setting in
+                            Text(setting.rawValue).tag(setting)
+                        }
                     }
+                    .pickerStyle(.menu)
                 }
-                .pickerStyle(.menu)
                 
-                Picker("Select a Year", selection: $fm.selectedYear) {
-                    ForEach(CollegeYearFilter.allCases) { setting in
-                        Text(String(setting.rawValue)).tag(setting)
-                            .bold()
+                
+                VStack {
+                    
+                    Text("Year")
+                        .bold()
+                    
+                    Picker("Year", selection: $fm.selectedYear) {
+                        ForEach(CollegeYearFilter.allCases) { setting in
+                            Text(String(setting.rawValue)).tag(setting)
+                        }
                     }
+                    .pickerStyle(.menu)
                 }
-                .pickerStyle(.menu)
                 
                 
-                Picker("Select a Setting", selection: $fm.selectedSetting) {
-                    ForEach(CollegeSettingFilter.allCases) { setting in
-                        Text(setting.rawValue).tag(setting)
-                            .bold()
+                VStack {
+                    
+                    Text("Setting")
+                        .bold()
+                    
+                    Picker("Setting", selection: $fm.selectedSetting) {
+                        ForEach(CollegeSettingFilter.allCases) { setting in
+                            Text(setting.rawValue).tag(setting)
+                        }
                     }
+                    .pickerStyle(.menu)
                 }
-                .pickerStyle(.menu)
                 
                 
-                Picker("Select a Selectivity", selection: $fm.selectedSelectivity) {
-                    ForEach(CollegeSelectivityFilter.allCases) { setting in
-                        Text(String(setting.rawValue)).tag(setting)
-                            .bold()
+                VStack {
+                    Text("Selectivity")
+                        .bold()
+                    
+                    Picker("Selectivity", selection: $fm.selectedSelectivity) {
+                        ForEach(CollegeSelectivityFilter.allCases) { setting in
+                            Text(String(setting.rawValue)).tag(setting)
+                        }
                     }
+                    .pickerStyle(.menu)
                 }
-                .pickerStyle(.menu)
                 
             }
+            .padding(.bottom, 4)
             
             if filteredColleges.count == 0 {
                 
@@ -80,7 +100,6 @@ struct CollegeExplorerView: View {
                         .padding()
                 }
                 .pickerStyle(.segmented)
-                .padding(.vertical, 4)
             }
         }
         .padding()
