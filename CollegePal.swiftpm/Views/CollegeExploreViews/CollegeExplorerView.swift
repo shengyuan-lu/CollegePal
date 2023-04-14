@@ -8,9 +8,9 @@ struct CollegeExplorerView: View {
     
     var body: some View {
         
-        ScrollView {
+        VStack {
             
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 
                 HStack {
                     
@@ -125,7 +125,7 @@ struct CollegeExplorerView: View {
                 .pickerStyle(.segmented)
             }
         }
-        .padding()
+        .padding(12)
         
         
         var filteredColleges: [CollegeStruct] {

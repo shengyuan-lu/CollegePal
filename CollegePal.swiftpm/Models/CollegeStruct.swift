@@ -48,6 +48,18 @@ struct CollegeStruct: Decodable {
         
     }
     
+    func getCollegeSelectivityInString() -> String {
+        
+        if self.acceptanceRate < 0.25 {
+            return "Very Selective"
+        } else if self.acceptanceRate < 0.5 {
+            return "Selective"
+        } else {
+            return "Less Selective"
+        }
+        
+    }
+    
     func getCollegeTypeEnum() -> CollegeTypeFilter {
         
         if type == "Public" {

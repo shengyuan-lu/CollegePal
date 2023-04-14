@@ -13,7 +13,7 @@ struct CollegeExplorerListView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             ForEach(colleges, id: \.name) { college in
                 
                 NavigationLink {
@@ -24,7 +24,6 @@ struct CollegeExplorerListView: View {
                 
             }
         }
-
         .edgesIgnoringSafeArea(.all)
         .scrollContentBackground(.hidden)
     }

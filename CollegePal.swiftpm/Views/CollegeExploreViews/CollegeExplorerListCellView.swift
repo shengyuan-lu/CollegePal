@@ -38,7 +38,7 @@ struct CollegeExplorerListCellView: View {
 
                 Spacer()
                 
-                HStack {
+                ScrollView(.horizontal, showsIndicators: false) {
                     
                     LazyHGrid(rows: [GridItem(.adaptive(minimum: 25, maximum: 75))]) {
                         TagView(text: college.type, foregroundColor: Color.white, backgroundColor: Color.accentColor)
@@ -46,9 +46,10 @@ struct CollegeExplorerListCellView: View {
                         TagView(text: college.getYearInString(), foregroundColor: Color.white, backgroundColor: Color.purple)
                         
                         TagView(text: college.setting, foregroundColor: Color.white, backgroundColor: Color.blue)
+                        
+                        TagView(text: college.getCollegeSelectivityInString(), foregroundColor: Color.white, backgroundColor: Color.mint)
                     }
                     
-                    Spacer()
                 }
                 
             }

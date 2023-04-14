@@ -10,7 +10,8 @@ import SwiftUI
 struct CollegeNotFoundView: View {
     var body: some View {
         
-        VStack {
+        VStack(alignment: .center) {
+            
             Image(systemName: "questionmark.folder.fill")
                 .font(.largeTitle)
                 .padding()
@@ -18,6 +19,7 @@ struct CollegeNotFoundView: View {
             Text("There are no colleges in the database that fit your filter.")
                 .font(.title2)
                 .bold()
+            
         }
         .foregroundColor(.accentColor)
 
