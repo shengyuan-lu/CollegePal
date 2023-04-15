@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "ucr1.jpeg",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
     }
   ],
   "info" : {

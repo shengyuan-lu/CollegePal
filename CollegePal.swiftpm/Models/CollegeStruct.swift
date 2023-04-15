@@ -38,7 +38,7 @@ struct CollegeStruct: Decodable {
     
     func getCollegeSelectivity() -> CollegeSelectivityFilter {
         
-        if self.acceptanceRate < 0.25 {
+        if self.acceptanceRate < 0.2 {
             return .VerySelective
         } else if self.acceptanceRate < 0.5 {
             return .Selective
@@ -50,9 +50,9 @@ struct CollegeStruct: Decodable {
     
     func getCollegeSelectivityInString() -> String {
         
-        if self.acceptanceRate < 0.25 {
+        if self.acceptanceRate < 0.15 {
             return "Very Selective"
-        } else if self.acceptanceRate < 0.5 {
+        } else if self.acceptanceRate < 0.4 {
             return "Selective"
         } else {
             return "Less Selective"

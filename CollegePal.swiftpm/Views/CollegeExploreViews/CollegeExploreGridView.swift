@@ -12,7 +12,7 @@ struct CollegeExploreGridView: View {
     var colleges: [CollegeStruct]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 350, maximum: 800))], spacing: 16) {
                 

@@ -114,7 +114,7 @@ struct CollegeExplorerView: View {
             
         }
         .alert(isPresented: $showInfo) {
-            Alert(title: Text("Information"), message: Text("For demostration purposes, only prominent Californian universities and systems are included to reduce complexity. In the production version of the app, more colleges will be added to the database."), dismissButton: .default(Text("Got it!")))
+            Alert(title: Text("Information"), message: Text("For demostration purposes, only Californian universities are included. In the production version of the app, more colleges will be added to the database."), dismissButton: .default(Text("Got it!")))
         }
         .searchable(text: $fm.searchText)
         .navigationTitle("Explore")
