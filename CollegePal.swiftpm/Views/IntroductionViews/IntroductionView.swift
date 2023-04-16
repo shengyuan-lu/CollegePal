@@ -11,14 +11,18 @@ struct IntroductionView: View {
     var body: some View {
         
         List {
-            Text("CollegePal")
+            
+            Section {
+                Text("CollegePal")
+            }
+
         }
         .navigationTitle("Introduction")
         
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct IntroductionView_Previews: PreviewProvider {
     static var previews: some View {
         IntroductionView()
     }

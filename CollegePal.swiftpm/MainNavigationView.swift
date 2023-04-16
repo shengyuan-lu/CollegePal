@@ -40,8 +40,13 @@ struct MainNavigationView: View {
                 }
                 
                 Section(header: Text("About")) {
+                    NavigationLink(destination: AboutMe()) {
+                        Label("About Me", systemImage: "person")
+                    }
                     
-                    
+                    NavigationLink(destination: AcknowledgementView()) {
+                        Label("Acknowledgement", systemImage: "star")
+                    }
                 }
             }
             .navigationTitle("CollegePal")

@@ -255,7 +255,7 @@
         "name": "San Francisco State University",
         "photo": ["sfsu1", "sfsu2"],
         "location": "San Francisco, CA",
-        "type": "Urban",
+        "type": "Public",
         "year": 4,
         "setting": "City",
         "topMajors": ["Business Administration", "Psychology", "Biology"],

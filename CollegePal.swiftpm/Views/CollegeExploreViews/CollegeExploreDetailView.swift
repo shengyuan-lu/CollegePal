@@ -39,7 +39,6 @@ struct CollegeExploreDetailView: View {
                             TagView(text: college.getCollegeSelectivityInString(), foregroundColor: Color.white, backgroundColor: Color.mint)
                         }
                         
-                        Spacer()
                     }
                 }
                 .padding(8)
@@ -88,79 +87,8 @@ struct CollegeExploreDetailView: View {
                 .padding(8)
                 
             }
-            
-            Section {
-                
-                VStack(alignment: .leading, spacing: 16) {
-                    
-                    Text("Data")
-                        .font(.title3)
-                        .bold()
-                    
-                    Divider()
-                    
-                    VStack(spacing: 12) {
-                        
-                        HStack {
-                            
-                            Text("Acceptance Rate")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text(college.getAcceptanceRateInString())
-                        }
-                        
-                        
-                        HStack {
-                            
-                            Text("Graduation Rate")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text(college.getGraduationRateInString())
-                        }
-                        
-                        
-                        HStack {
-                            
-                            Text("Annual Tuition")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text("$" + String(college.tuitionFee))
-                        }
-                        
-                        
-                        HStack {
-                            
-                            Text("Undergraduate Enrollment")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text(String(college.undergraduateEnrollment) + " Students")
-                        }
-                        
-                        HStack {
-                            
-                            Text("Location")
-                                .bold()
-                            
-                            Spacer()
-                            
-                            Text(String(college.location))
-                        }
-                        
-                        
-                    }
-                }
-                .padding(8)
-                
-            }
-            
+           
+            CollegeDetailDataView(college: college)
             
             Section {
                 
@@ -175,11 +103,28 @@ struct CollegeExploreDetailView: View {
                         
                         BarMark(x: .value("Acceptance Rate", college.acceptanceRate * 100),
                                 y: .value("College", college.name))
+                        .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
+                            Text("\(Int(college.acceptanceRate * 100)) %")
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .fontWeight(.bold)
+                            
+                        }
+                        
                         
                         BarMark(x: .value("Acceptance Rate", 0.68 * 100),
                                 y: .value("College", "National Average"))
+                        .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
+                            Text("\(Int(0.68 * 100)) %")
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .fontWeight(.bold)
+                            
+                        }
+                        
                         
                     }
+                    .chartXScale(domain: 0...100)
                     .chartXAxisLabel("Acceptance Rate %")
                     .padding(16)
                     
@@ -201,12 +146,27 @@ struct CollegeExploreDetailView: View {
                         
                         BarMark(x: .value("Graduation Rate", college.graduationRate * 100),
                                 y: .value("College", college.name))
+                        .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
+                            Text("\(Int(college.graduationRate * 100)) %")
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .fontWeight(.bold)
+                            
+                        }
                         
                         
                         BarMark(x: .value("Graduation Rate", 0.64 * 100),
                                 y: .value("College", "National Average"))
+                        .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
+                            Text("\(Int(0.64 * 100)) %")
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .fontWeight(.bold)
+                            
+                        }
                         
                     }
+                    .chartXScale(domain: 0...100)
                     .chartXAxisLabel("Graduation Rate %")
                     .padding(16)
                     
