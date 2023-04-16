@@ -1,5 +1,5 @@
 //
-//  CollegeExplorerListCellView.swift
+//  CollegeExploreListCellView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/11/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollegeExplorerListCellView: View {
+struct CollegeExploreListCellView: View {
     
     let college: CollegeStruct
     
@@ -58,8 +58,8 @@ struct CollegeExplorerListCellView: View {
     }
 }
 
-struct CollegeExplorerListCellView_Previews: PreviewProvider {
+struct CollegeExploreListCellView_Previews: PreviewProvider {
     static var previews: some View {
-        CollegeExplorerListCellView(college: CollegeStruct.example)
+        CollegeExploreListCellView(college: CollegeStruct.example)
     }
 }

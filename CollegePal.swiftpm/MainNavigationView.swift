@@ -24,7 +24,7 @@ struct MainNavigationView: View {
                 }
                 
                 Section(header: Text("Explore")) {
-                    NavigationLink(destination: CollegeExplorerView()) {
+                    NavigationLink(destination: CollegeExploreView()) {
                         Label("Explore Colleges", systemImage: "globe.desk")
                     }
                 }

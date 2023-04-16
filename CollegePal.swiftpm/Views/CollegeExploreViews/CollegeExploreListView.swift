@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollegeExplorerListView: View {
+struct CollegeExploreListView: View {
     
     var colleges: [CollegeStruct]
     
@@ -19,7 +19,7 @@ struct CollegeExplorerListView: View {
                 NavigationLink {
                     CollegeExploreDetailView(college: college)
                 } label: {
-                    CollegeExplorerListCellView(college: college)
+                    CollegeExploreListCellView(college: college)
                 }
                 
             }

@@ -1,6 +1,13 @@
+//
+//  CollegeExploreView.swift
+//
+//
+//  Created by Shengyuan Lu on 4/11/23.
+//
+
 import SwiftUI
 
-struct CollegeExplorerView: View {
+struct CollegeExploreView: View {
     
     @ObservedObject var viewModel = CollegeExplorerVM()
     
@@ -108,7 +115,7 @@ struct CollegeExplorerView: View {
                     
                 } else if fm.displayStyle == .List {
                     
-                    CollegeExplorerListView(colleges: filteredColleges)
+                    CollegeExploreListView(colleges: filteredColleges)
                 }
             }
             

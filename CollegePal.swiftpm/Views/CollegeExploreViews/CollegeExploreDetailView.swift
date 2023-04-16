@@ -88,7 +88,7 @@ struct CollegeExploreDetailView: View {
                 
             }
            
-            CollegeDetailDataView(college: college)
+            CollegeExploreDetailDataView(college: college)
             
             Section {
                 
