@@ -18,7 +18,7 @@ struct MainNavigationView: View {
                 Section(header: Text("Introduction")) {
                     
                     NavigationLink(destination: IntroductionView()) {
-                        Label("Introduction", systemImage: "arrow.forward.circle")
+                        Label("Getting Started", systemImage: "arrow.forward.circle")
                     }
                     
                 }
@@ -29,18 +29,20 @@ struct MainNavigationView: View {
                     }
                 }
                 
-                Section(header: Text("Find My Fit")) {
-                    
-                    
+                Section(header: Text("Find")) {
+                    NavigationLink(destination: SubmittedView()) {
+                        Label("Find My Fit", systemImage: "magnifyingglass")
+                    }
                 }
                 
                 Section(header: Text("Submit")) {
-                    
-                    
+                    NavigationLink(destination: ChecklistView()) {
+                        Label("Simulate Submission", systemImage: "paperplane")
+                    }
                 }
                 
                 Section(header: Text("About")) {
-                    NavigationLink(destination: AboutMe()) {
+                    NavigationLink(destination: AboutMeView()) {
                         Label("About Me", systemImage: "person")
                     }
                     

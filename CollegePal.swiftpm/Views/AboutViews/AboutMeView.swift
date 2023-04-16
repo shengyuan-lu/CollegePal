@@ -1,5 +1,5 @@
 //
-//  AboutMe.swift
+//  AboutMeView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/15/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AboutMe: View {
+struct AboutMeView: View {
     
     var body: some View {
         
@@ -59,7 +59,6 @@ struct AboutMe: View {
                     }
                     
                 }
-                .padding(8)
             }
             
             Section(header: Text("Fun Facts")) {
@@ -117,8 +116,7 @@ struct AboutMe: View {
             }
             
             Section("Detail") {
-                Text("I am an engineer by training, a software developer by profession, and a creative artist by heart. If what I want doesn’t exist, I build it from scratch. From the chemistry board game I designed in high school to my newest iOS app ZotMeal, I am obsessed with turning ideas into reality. In my free time, I like to attend Hackathons to meet people with ambitious vision. I wake up every day with a sense of excitement and purpose, eager to make a difference in the world.")
-                    .padding(8)
+                Text("I am an engineer by training, a software developer by profession, and a creative artist by heart. If what I want doesn’t exist, I build it from scratch. From the chemistry board game I designed in high school to my newest iOS app ZotMeal, I am obsessed with turning ideas into reality. I wake up every day with a sense of excitement and purpose, eager to make a difference in the world though technology. Thanks for checking out my Swift Playground App!")
             }
             
             
@@ -133,6 +131,6 @@ struct AboutMe: View {
 
 struct AboutMe_Previews: PreviewProvider {
     static var previews: some View {
-        AboutMe()
+        AboutMeView()
     }
 }

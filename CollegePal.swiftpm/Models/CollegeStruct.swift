@@ -25,11 +25,11 @@ struct CollegeStruct: Decodable {
     let description: String
     
     func getAcceptanceRateInString() -> String {
-        return "\(Int(acceptanceRate * 100)) %"
+        return "\(Int(acceptanceRate * 100))%"
     }
     
     func getGraduationRateInString() -> String {
-        return "\(Int(graduationRate * 100)) %"
+        return "\(Int(graduationRate * 100))%"
     }
     
     func getYearInString() -> String {

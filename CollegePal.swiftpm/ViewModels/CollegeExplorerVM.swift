@@ -25,5 +25,7 @@ class CollegeExplorerVM: ObservableObject {
         colleges.shuffle()
     }
     
+
+    
     
 }

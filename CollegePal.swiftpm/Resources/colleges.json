@@ -1,7 +1,7 @@
 [
     {
         "name": "Stanford University",
-        "photo": ["stanford1", "stanford2", "stanford3"],
+        "photo": ["stanford1"],
         "location": "Palo Alto, CA",
         "type": "Private",
         "year": 4,
@@ -15,7 +15,7 @@
     },
     {
         "name": "University of California, Los Angeles",
-        "photo": ["ucla1", "ucla2"],
+        "photo": ["ucla1"],
         "location": "Los Angeles, CA",
         "type": "Public",
         "year": 4,
@@ -29,7 +29,7 @@
     },
     {
         "name": "California Institute of Technology",
-        "photo": ["caltech1", "caltech2"],
+        "photo": ["caltech1"],
         "location": "Pasadena, CA",
         "type": "Private",
         "year": 4,
@@ -43,7 +43,7 @@
     },
     {
         "name": "University of Southern California",
-        "photo": ["usc1", "usc2"],
+        "photo": ["usc1"],
         "location": "Los Angeles, CA",
         "type": "Private",
         "year": 4,
@@ -57,7 +57,7 @@
     },
     {
         "name": "University of California, Berkeley",
-        "photo": ["berkeley1", "berkeley2"],
+        "photo": ["berkeley1"],
         "location": "Berkeley, CA",
         "type": "Public",
         "year": 4,
@@ -71,7 +71,7 @@
     },
     {
         "name": "University of California, Irvine",
-        "photo": ["uci1", "uci2"],
+        "photo": ["uci1"],
         "location": "Irvine, CA",
         "type": "Public",
         "year": 4,
@@ -85,7 +85,7 @@
     },
     {
         "name": "University of California, Davis",
-        "photo": ["ucd1", "ucd2"],
+        "photo": ["ucd1"],
         "location": "Davis, CA",
         "type": "Public",
         "year": 4,
@@ -99,7 +99,7 @@
     },
     {
         "name": "University of California, Santa Barbara",
-        "photo": ["ucsb1", "ucsb2"],
+        "photo": ["ucsb1"],
         "location": "Santa Barbara, CA",
         "type": "Public",
         "year": 4,
@@ -113,7 +113,7 @@
     },
     {
         "name": "University of California, San Diego",
-        "photo": ["ucsd1", "ucsd2"],
+        "photo": ["ucsd1"],
         "location": "La Jolla, CA",
         "type": "Public",
         "year": 4,
@@ -127,7 +127,7 @@
     },
     {
         "name": "University of California, Riverside",
-        "photo": ["ucr1", "ucr2"],
+        "photo": ["ucr1"],
         "location": "Riverside, CA",
         "type": "Public",
         "year": 4,
@@ -141,7 +141,7 @@
     },
     {
         "name": "University of California, Santa Cruz",
-        "photo": ["ucsc1", "ucsc2"],
+        "photo": ["ucsc1"],
         "location": "Santa Cruz, CA",
         "type": "Public",
         "year": 4,
@@ -155,7 +155,7 @@
     },
     {
         "name": "University of California, Merced",
-        "photo": ["ucm1", "ucm2"],
+        "photo": ["ucm1"],
         "location": "Merced, CA",
         "type": "Public",
         "year": 4,
@@ -168,8 +168,8 @@
         "description": "The University of California, Merced is a public research university located in Merced, California. It is the newest campus of the University of California system and is known for its strong programs in engineering, psychology, and environmental studies, among others. With a small but growing student body of over 9,000 students, UC Merced offers a close-knit and supportive community for learning and research."
     },
     {
-        "name": "California Community College",
-        "photo": ["cc1", "cc2"],
+        "name": "California Community Colleges",
+        "photo": ["cc1"],
         "location": "Anywhere, CA",
         "type": "Public",
         "year": 2,
@@ -183,7 +183,7 @@
     },
     {
         "name": "California State University, Fullerton",
-        "photo": ["csuf1", "csuf2"],
+        "photo": ["csuf1"],
         "location": "Fullerton, CA",
         "type": "Public",
         "year": 4,
@@ -197,7 +197,7 @@
     },
     {
         "name": "San Diego State University",
-        "photo": ["sdsu1", "sdsu2"],
+        "photo": ["sdsu1"],
         "location": "San Diego, CA",
         "type": "Public",
         "year": 4,
@@ -211,7 +211,7 @@
     },
     {
         "name": "California State University, Chico",
-        "photo": ["chico1", "chico2"],
+        "photo": ["chico1"],
         "location": "Chico, CA",
         "type": "Public",
         "year": 4,
@@ -225,7 +225,7 @@
     },
     {
         "name": "San Jose State University",
-        "photo": ["sjsu1", "sjsu2"],
+        "photo": ["sjsu1"],
         "location": "San Jose, CA",
         "type": "Public",
         "year": 4,
@@ -239,7 +239,7 @@
     },
     {
         "name": "California Polytechnic State University",
-        "photo": ["calpoly1", "calpoly2"],
+        "photo": ["calpoly1"],
         "location": "San Luis Obispo, CA",
         "type": "Public",
         "year": 4,
@@ -253,7 +253,7 @@
     },
     {
         "name": "San Francisco State University",
-        "photo": ["sfsu1", "sfsu2"],
+        "photo": ["sfsu1"],
         "location": "San Francisco, CA",
         "type": "Public",
         "year": 4,
@@ -267,7 +267,7 @@
     },
     {
         "name": "University of San Francisco",
-        "photo": ["usf1", "usf2"],
+        "photo": ["usf1"],
         "location": "San Francisco, CA",
         "type": "Private",
         "year": 4,

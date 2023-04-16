@@ -87,7 +87,7 @@ struct CollegeExploreDetailView: View {
                 .padding(8)
                 
             }
-           
+            
             CollegeExploreDetailDataView(college: college)
             
             Section {
@@ -115,7 +115,7 @@ struct CollegeExploreDetailView: View {
                         BarMark(x: .value("Acceptance Rate", 0.68 * 100),
                                 y: .value("College", "National Average"))
                         .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
-                            Text("\(Int(0.68 * 100)) %")
+                            Text("\(Int(0.68 * 100))%")
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .fontWeight(.bold)
@@ -147,18 +147,19 @@ struct CollegeExploreDetailView: View {
                         BarMark(x: .value("Graduation Rate", college.graduationRate * 100),
                                 y: .value("College", college.name))
                         .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
-                            Text("\(Int(college.graduationRate * 100)) %")
+                            
+                            Text("\(Int(college.graduationRate * 100))%")
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .fontWeight(.bold)
                             
                         }
                         
-                        
                         BarMark(x: .value("Graduation Rate", 0.64 * 100),
                                 y: .value("College", "National Average"))
                         .annotation(position: .trailing, alignment: .trailing, spacing: 5) {
-                            Text("\(Int(0.64 * 100)) %")
+                            
+                            Text("\(Int(0.64 * 100))%")
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .fontWeight(.bold)
