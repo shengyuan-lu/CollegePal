@@ -126,6 +126,19 @@ struct CollegeExploreView: View {
         .searchable(text: $fm.searchText)
         .navigationTitle("Explore")
         .toolbar {
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    self.viewModel.shuffleColleges()
+                } label: {
+                    Image(systemName: "shuffle")
+                        .padding(3.5)
+                        .background(Color.accentColor.opacity(0.2))
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+
+                }
+            }
+            
             ToolbarItem(placement: .navigationBarTrailing) {
                 Picker("Display Style", selection: $fm.displayStyle) {
                     Image(systemName: "square.grid.2x2").tag(CollegeExplorerViewOptions.Grid)

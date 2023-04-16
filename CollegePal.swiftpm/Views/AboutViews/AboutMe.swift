@@ -42,7 +42,7 @@ struct AboutMe: View {
                 
             }
             .edgesIgnoringSafeArea(.all)
-            .background(Color.accentColor.opacity(0.3))
+            .background(Color.accentColor.opacity(0.2))
             
             Section(header: Text("HashTags")) {
                 
