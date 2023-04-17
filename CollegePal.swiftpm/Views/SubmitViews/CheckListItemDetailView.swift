@@ -20,7 +20,7 @@ struct ChecklistItemDetailView: View {
                 Text(item.name)
                     .font(.title2)
                     .bold()
-                    .padding(12)
+                    .padding(8)
             }
             
             Section {
@@ -34,7 +34,7 @@ struct ChecklistItemDetailView: View {
                     Text(item.description)
                     
                 }
-                .padding(12)
+                .padding(8)
                 
             }
             
@@ -42,18 +42,20 @@ struct ChecklistItemDetailView: View {
                 
                 HStack {
                     
-                    Spacer()
-                    
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         
-                        Text("Check")
-                            .padding(12)
-                            .padding(.horizontal, 8)
-                            .foregroundColor(.white)
-                            .background(Color.accentColor)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        HStack{
+                            
+                            Text("Mark As Complete")
+                                .padding(8)
+                                .padding(.horizontal, 8)
+                                .foregroundColor(.white)
+                                .background(Color.accentColor)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            
+                        }
                         
                     }
                     

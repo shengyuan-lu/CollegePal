@@ -116,7 +116,7 @@ struct AboutMeView: View {
             }
             
             Section("Detail") {
-                Text("I am an engineer by training, a software developer by profession, and a creative artist by heart. If what I want doesn’t exist, I build it from scratch. From the chemistry board game I designed in high school to my newest iOS app ZotMeal, I am obsessed with turning ideas into reality. I wake up every day with a sense of excitement and purpose, eager to make a difference in the world though technology. Thanks for checking out my Swift Playground App!")
+                Text("I am an engineer by training, a software developer by profession, and a creative artist by heart. If what I want doesn’t exist, I build it from scratch. From the chemistry board game I designed in high school to my newest iOS app ZotMeal, I am obsessed with turning ideas into reality. I wake up every day with a sense of excitement and purpose, eager to make a difference in the world through design and technology. Thanks for checking out my Swift Playground App!")
             }
             
             

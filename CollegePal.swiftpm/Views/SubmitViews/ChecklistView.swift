@@ -42,6 +42,7 @@ struct ChecklistView: View {
                         } label: {
                             HStack {
                                 Image(systemName: item.isChecked ? "checkmark.square.fill" : "square")
+                                    .font(.title)
                             }
                         }
                         
@@ -82,7 +83,10 @@ struct ChecklistView: View {
             
         }
         .sheet(item: $selectedItem) { item in
-            ChecklistItemDetailView(item: item)
+            
+            NavigationView {
+                ChecklistItemDetailView(item: item)
+            }
         }
         .navigationTitle("College Application Simulator")
         
