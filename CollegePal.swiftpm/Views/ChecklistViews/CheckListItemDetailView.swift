@@ -48,14 +48,18 @@ struct ChecklistItemDetailView: View {
                         
                         HStack{
                             
+                            Spacer()
+                            
                             Text("Mark As Complete")
-                                .padding(8)
-                                .padding(.horizontal, 8)
-                                .foregroundColor(.white)
-                                .background(Color.accentColor)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+
+                            Spacer()
                             
                         }
+                        .padding(16)
+                        .padding(.horizontal, 16)
+                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
                     

@@ -1,5 +1,5 @@
 //
-//  SubmittedView.swift
+//  ChecklistSubmittedView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/16/23.
@@ -11,7 +11,7 @@ import SwiftUI
 import UIKit
 import ConfettiSwiftUI
 
-struct SubmittedView: View {
+struct ChecklistSubmittedView: View {
     
     @State private var counter: Int = 0
     
@@ -26,7 +26,7 @@ struct SubmittedView: View {
                     
                 })
             
-            Text("You've completed this submission simulator and got to know all the components for a college application!")
+            Text("You've completed this checklist and got to know all the components for a college application!")
         }
         .navigationTitle("")
         .confettiCannon(counter: $counter, radius: 600, repetitions: 3, repetitionInterval: 0.7)

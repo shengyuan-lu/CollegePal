@@ -63,60 +63,22 @@ struct AboutMeView: View {
             
             Section(header: Text("Fun Facts")) {
                 
-                HStack {
-                    
-                    Text("Majoring...")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("Computer Science")
-                }
                 
-                HStack {
-                    
-                    Text("Studying At...")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("UC Irvine")
-                }
+                AboutMeViewFunFactsCellView(key: "Majoring...", value: "Computer Science")
                 
-                HStack {
-                    
-                    Text("Learning Next...")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("HealthKit, PencilKit")
-                }
+                AboutMeViewFunFactsCellView(key: "Studying At...", value: "UC Irvine")
                 
-                HStack {
-                    
-                    Text("Hoping To Visit...")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("Apple Park")
-                }
+                AboutMeViewFunFactsCellView(key: "Learning Next...", value: "HealthKit, PencilKit")
                 
-                HStack {
-                    
-                    Text("Favorite Apple Product...")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text("MacBook Pro")
-                }
+                AboutMeViewFunFactsCellView(key: "Hoping To Visit...", value: "Apple Park")
+                
+                AboutMeViewFunFactsCellView(key: "Favorite Apple Product...", value: "MacBook Pro")
                 
             }
             
             Section("Detail") {
                 Text("I am an engineer by training, a software developer by profession, and a creative artist by heart. If what I want doesn’t exist, I build it from scratch. From the chemistry board game I designed in high school to my newest iOS app ZotMeal, I am obsessed with turning ideas into reality. I wake up every day with a sense of excitement and purpose, eager to make a difference in the world through design and technology. Thanks for checking out my Swift Playground App!")
+                    .padding(.vertical, 4)
             }
             
             

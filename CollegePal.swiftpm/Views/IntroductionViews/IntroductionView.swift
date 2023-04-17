@@ -11,7 +11,6 @@ struct IntroductionView: View {
     var body: some View {
         
         List {
-            
             Section {
                 Image("Banner")
                     .resizable()
@@ -23,38 +22,21 @@ struct IntroductionView: View {
                 Text("As an international student, the college application process was one of the most challenging times of my life. I felt lost and overwhelmed, with little guidance or support. Despite my best efforts, I struggled to navigate the complexities of the system. I knew that I wasn't alone. Many students, especially those who are first-generation and underrepresented, face even more challenges due to limited resources at their high school.")
                     .padding(.vertical, 8)
                 
-                Text("That's why I decide to create CollegePal, a college Application Assistant. The goal of CollegePal is to provide students with the tools and resources they need to make informed decisions about their college choices and to ensure that all students have equal access to college data.")
+                Text("That's why I decide to create CollegePal, a college application assistant. The goal of CollegePal is to provide students with the tools and resources they need to make informed decisions about their college choices and to ensure that all students have equal access to college data.")
+                    .padding(.vertical, 8)
             }
             
-            Section(header: Text("CollegePal Features")) {
+            Section(header: Text("Feature Preview")) {
                 
-                VStack(alignment: .leading) {
-                    Text("Feature 1")
-                        .bold()
-                        .padding(.bottom, 4)
-                    
-                    Text("Explore College Options Through Filters")
-                }
+                IntroductionViewFeatureListCellView(title: "Feature 1", description: "Explore College Options Through Filters")
                 
-                VStack(alignment: .leading) {
-                    Text("Feature 2")
-                        .bold()
-                        .padding(.bottom, 4)
-                    
-                    Text("Find Your Reach, Match, Safety Colleges Through Machine Learning")
-                }
+                IntroductionViewFeatureListCellView(title: "Feature 2", description: "Use College Application Checklist To Learn More About Required Materials")
                 
-                VStack(alignment: .leading) {
-                    Text("Feature 3")
-                        .bold()
-                        .padding(.bottom, 4)
-                    
-                    Text("Simulate College Application Submission Process To Learn About Required Materials")
-                }
+                IntroductionViewFeatureListCellView(title: "Feature 3", description: "Find Your Reach, Match, Safety Colleges Through Machine Learning")
+                
             }
 
         }
-        //.scrollContentBackground(.hidden)
         .navigationTitle("Getting Started")
         
     }

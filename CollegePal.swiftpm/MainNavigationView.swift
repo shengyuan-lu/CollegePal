@@ -29,15 +29,15 @@ struct MainNavigationView: View {
                     }
                 }
                 
-                Section(header: Text("Find")) {
-                    NavigationLink(destination: FindView()) {
-                        Label("Find My Fit", systemImage: "magnifyingglass")
+                Section(header: Text("Checklist")) {
+                    NavigationLink(destination: ChecklistView()) {
+                        Label("Application Checklist", systemImage: "checklist")
                     }
                 }
                 
-                Section(header: Text("Submit")) {
-                    NavigationLink(destination: ChecklistView()) {
-                        Label("Simulate Submission", systemImage: "paperplane")
+                Section(header: Text("Find")) {
+                    NavigationLink(destination: FindFitView()) {
+                        Label("Find My Fit", systemImage: "magnifyingglass")
                     }
                 }
                 

@@ -20,7 +20,7 @@ struct ChecklistView: View {
         List {
             
             Section(header: Text("Instruction")) {
-                Text("Just like completing a real college application, tick the checkboxes below to mark off all the components required.")
+                Text("Understand the components that make up a college application is essential to gain admission. Please check the boxes below to learn about each component and mark it off once you've read the descriptions.")
             }
             
             Section(header: Text("Check List")) {
@@ -33,7 +33,6 @@ struct ChecklistView: View {
                             
                             if !item.isChecked {
                                 selectedItem = item
-                                
                             }
                             
                             viewModel.toggleCheck(id: item.id)
@@ -57,7 +56,7 @@ struct ChecklistView: View {
                 
                 NavigationLink(isActive: $submitted) {
                     
-                    SubmittedView()
+                    ChecklistSubmittedView()
                     
                 } label: {
                     
@@ -70,9 +69,16 @@ struct ChecklistView: View {
                     } label: {
                         
                         HStack {
+                            Spacer()
                             Image(systemName: "paperplane.fill")
-                            Text("Submit")
+                            Text("Finish Checklist")
+                            Spacer()
                         }
+                        .padding(16)
+                        .padding(.horizontal, 16)
+                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
                     .disabled(!viewModel.isAllItemsChecked())
@@ -82,13 +88,12 @@ struct ChecklistView: View {
             }
             
         }
+        .navigationTitle("Application Checklist")
         .sheet(item: $selectedItem) { item in
-            
             NavigationView {
                 ChecklistItemDetailView(item: item)
             }
         }
-        .navigationTitle("College Application Simulator")
         
     }
     
