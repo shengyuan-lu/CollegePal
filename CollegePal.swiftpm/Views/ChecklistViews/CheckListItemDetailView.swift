@@ -51,6 +51,7 @@ struct ChecklistItemDetailView: View {
                             Spacer()
                             
                             Text("Mark As Complete")
+                                .bold()
 
                             Spacer()
                             

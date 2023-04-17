@@ -20,10 +20,6 @@ struct AcknowledgementView: View {
                     .padding(.vertical, 8)
             }
             
-            Section(header: Text("Open Source Code")) {
-                Text("ConfettiSwiftUI, an open source Swift Package, is used in this Swift Playground App. Simon Bachmann authored this package. ConfettiSwiftUI is under MIT License. The source of this package is https://github.com/simibac/ConfettiSwiftUI. I do not own ConfettiSwiftUI, and my usage comply with all applicable licensing terms and copyright obligations.")
-                    .padding(.vertical, 8)
-            }
         }
         .navigationTitle("Acknowledgement")
     }

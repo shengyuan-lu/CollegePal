@@ -18,8 +18,10 @@ struct FindFitView: View {
         List {
             
             Section(header: Text("Instruction")) {
+                
                 Text("To maximize your options during the college application process, it's crucial to choose a combination of safety, match, and reach schools.")
                     .padding(.vertical, 4)
+                
                 
                 Text("A safety school is one where your academic qualifications exceed the average requirements for admission. A match school is one where your academic qualifications are in line with the average requirements for admission. A reach school is one where your qualifications are below the average requirements for admission, but it is still worth applying because admission is possible. ")
                     .padding(.vertical, 4)
@@ -168,8 +170,12 @@ struct FindFitView: View {
                 } label: {
                     HStack {
                         Spacer()
-                        Image(systemName: "text.viewfinder")
-                        Text("Find My Fit")
+                        
+                        Image(systemName: "graduationcap.fill")
+                        
+                        Text("Find My Colleges")
+                            .bold()
+                        
                         Spacer()
                     }
                     .padding(16)

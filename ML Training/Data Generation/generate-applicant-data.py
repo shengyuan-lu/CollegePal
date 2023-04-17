@@ -8,10 +8,6 @@ def write(data, fieldnames):
         for row in data:
             writer.writerow(row)
 
-
-
-
-
 if __name__ == '__main__':
     # Define the headers for the CSV file
     fieldnames = ['highschool-gpa', 'test-score', 'extracurricular-quality', 'award-quality', 'recommendation-quality',

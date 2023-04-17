@@ -70,8 +70,11 @@ struct ChecklistView: View {
                         
                         HStack {
                             Spacer()
+                            
                             Image(systemName: "paperplane.fill")
                             Text("Finish Checklist")
+                                .bold()
+                            
                             Spacer()
                         }
                         .padding(16)
@@ -81,9 +84,10 @@ struct ChecklistView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
-                    .disabled(!viewModel.isAllItemsChecked())
+                   
                     
                 }
+                .disabled(!viewModel.isAllItemsChecked())
                 
             }
             
