@@ -21,9 +21,7 @@ struct FindFitView: View {
             
             Section(header: Text("Instruction")) {
                 
-                
                 VStack(alignment: .leading) {
-                    
                     
                     Text("To maximize your options during the college application process, it's crucial to choose a combination of safety, match, and reach schools.")
                         .padding(.vertical, 4)
@@ -220,6 +218,7 @@ struct FindFitView: View {
                 
             }
         }
+
         
     }
 }

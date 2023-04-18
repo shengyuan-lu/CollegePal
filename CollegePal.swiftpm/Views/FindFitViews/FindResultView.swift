@@ -14,6 +14,6 @@ struct FindResultView: View {
     let findVM: FindVM
     
     var body: some View {
-        Text("\(findVM.getNormalizedScore())")
+        Text("\(findVM.getPrediction())")
     }
 }

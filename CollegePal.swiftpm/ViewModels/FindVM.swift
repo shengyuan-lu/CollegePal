@@ -23,7 +23,20 @@ class FindVM: ObservableObject {
     
     func getPrediction() -> Double {
         
-        let config = MLModelConfiguration()
+        
+        do {
+        
+            let config = MLModelConfiguration()
+            let model = try FindFit(configuration: config)
+            
+            let prediction = try model.prediction(normalized_score: self.getNormalizedScore())
+            
+            return prediction.admissions_rate
+
+        } catch {
+            
+        }
+        
 
         return 0.0
     }

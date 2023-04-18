@@ -16,6 +16,9 @@ class JSONParser<T: Decodable> {
             if let filePath = Bundle.main.path(forResource: name, ofType: type) {
                 let fileUrl = URL(fileURLWithPath: filePath)
                 let data = try Data(contentsOf: fileUrl)
+                
+                // print(fileUrl)
+                
                 return data
             }
             
