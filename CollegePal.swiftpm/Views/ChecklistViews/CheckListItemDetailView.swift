@@ -63,6 +63,7 @@ struct ChecklistItemDetailView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
+                    .buttonStyle(.plain)
                     
                     Spacer()
                 }

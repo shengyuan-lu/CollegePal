@@ -15,8 +15,11 @@ class CollegeExplorerVM: ObservableObject {
     
     init() {
         
-        colleges = JSONParser<CollegeStruct>.parse(forFileName: "colleges", forType: "json")
+        var tempColleges = JSONParser<CollegeStruct>.parse(forFileName: "colleges", forType: "json")
         
+        tempColleges.shuffle()
+        
+        colleges = tempColleges
     }
     
     func shuffleColleges() {

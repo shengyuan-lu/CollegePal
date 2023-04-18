@@ -13,20 +13,28 @@ struct FindFitView: View {
     
     @State var showInfo = false
     
+    @State var nvLinkActive = false
+    
     var body: some View {
         
         List {
             
             Section(header: Text("Instruction")) {
                 
-                Text("To maximize your options during the college application process, it's crucial to choose a combination of safety, match, and reach schools.")
-                    .padding(.vertical, 4)
                 
+                VStack(alignment: .leading) {
+                    
+                    
+                    Text("To maximize your options during the college application process, it's crucial to choose a combination of safety, match, and reach schools.")
+                        .padding(.vertical, 4)
+                    
+                    
+                    Text("A safety school is one where your academic qualifications exceed the average requirements for admission and you have a great chance of getting in. A match school is one where your academic qualifications are in line with the standard requirements for admission and you have an average chance of getting in. A reach school is one where your qualifications are below the average requirements for admission, but it is still worth applying because admission is possible. ")
+                        .padding(.vertical, 4)
+                    
+                }
                 
-                Text("A safety school is one where your academic qualifications exceed the average requirements for admission. A match school is one where your academic qualifications are in line with the average requirements for admission. A reach school is one where your qualifications are below the average requirements for admission, but it is still worth applying because admission is possible. ")
-                    .padding(.vertical, 4)
-                
-                Text("CollegePal can help you by utilizing machine learning to suggest colleges from each category based on your self-assessment.")
+                Text("CollegePal can help you by utilizing machine learning to suggest colleges from each category based on your self-assessment below.")
                     .padding(.vertical, 4)
             }
             
@@ -50,7 +58,7 @@ struct FindFitView: View {
                                 
                             }
                             
-                            Slider(value: $viewModel.gpa, in: 0...4.5)
+                            Slider(value: $viewModel.gpa, in: 0...4)
                             
                         }
                         .padding(8)
@@ -163,39 +171,43 @@ struct FindFitView: View {
                 }
                 .padding(.vertical, 8)
                 
-                NavigationLink {
+                NavigationLink(isActive: $nvLinkActive) {
                     
-                    ChecklistSubmittedView()
+                    FindResultView(findVM: viewModel)
                     
                 } label: {
-                    HStack {
-                        Spacer()
+                    
+                    Button(action: {
+                        nvLinkActive.toggle()
+                    }) {
                         
-                        Image(systemName: "graduationcap.fill")
+                        HStack {
+                            Spacer()
+                            
+                            Image(systemName: "graduationcap.fill")
+                            
+                            Text("Find My Colleges")
+                                .bold()
+                            
+                            Spacer()
+                        }
+                        .padding(16)
+                        .padding(.horizontal, 16)
+                        .foregroundColor(.white)
+                        .background(Color.accentColor)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         
-                        Text("Find My Colleges")
-                            .bold()
-                        
-                        Spacer()
                     }
-                    .padding(16)
-                    .padding(.horizontal, 16)
-                    .foregroundColor(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .buttonStyle(.plain)
+                    
                 }
-                
+
             }
             
-            Section {
-                
-
-                
-            }
         }
         .navigationTitle("Find My Fit")
         .alert(isPresented: $showInfo) {
-            Alert(title: Text("Information"), message: Text("Please note that the training data used for this prototype CoreML model is entirely fictional and intended only for demonstration purposes."), dismissButton: .default(Text("Got it!")))
+            Alert(title: Text("Information"), message: Text("Please note that both the training data and all algorithms associated for this prototype CoreML model is entirely fictional and intended only for demonstration purposes."), dismissButton: .default(Text("Got it!")))
         }
         .toolbar {
             

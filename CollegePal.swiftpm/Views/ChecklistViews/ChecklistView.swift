@@ -20,7 +20,17 @@ struct ChecklistView: View {
         List {
             
             Section(header: Text("Instruction")) {
-                Text("Understand the components that make up a college application is essential to gain admission. Please check the boxes below to learn about each component and mark it off once you've read the descriptions.")
+                
+                VStack {
+                    Image("Checklist Banner")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    
+                    Text("Understand the components that make up a college application is essential to navigate your application season. Please check the boxes below to learn about each component and mark it off once you've read and understood the descriptions.")
+                        .padding(.top, 6)
+                }
+
             }
             
             Section(header: Text("Check List")) {
@@ -84,6 +94,7 @@ struct ChecklistView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
+                    .buttonStyle(.plain)
                    
                     
                 }
