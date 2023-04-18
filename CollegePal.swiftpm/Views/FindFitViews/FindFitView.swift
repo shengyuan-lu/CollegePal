@@ -27,7 +27,7 @@ struct FindFitView: View {
                         .padding(.vertical, 4)
                     
                     
-                    Text("A safety school is one where your academic qualifications exceed the average requirements for admission and you have a great chance of getting in. A match school is one where your academic qualifications are in line with the standard requirements for admission and you have an average chance of getting in. A reach school is one where your qualifications are below the average requirements for admission, but it is still worth applying because admission is possible. ")
+                    Text("A safety college is one where your academic qualifications exceed the average requirements for admission and you have a great chance of getting in. A match college is one where your academic qualifications are in line with the standard requirements for admission and you have an average chance of getting in. A reach college is one where your qualifications are below the average requirements for admission, but it is still worth applying because admission is possible. ")
                         .padding(.vertical, 4)
                     
                 }
@@ -97,6 +97,31 @@ struct FindFitView: View {
                             
                             HStack {
                                 
+                                Text("Personal Statement")
+                                    .bold()
+                                
+                                Spacer()
+                                
+                                Text(viewModel.getClassificationString(value: viewModel.personalStatement))
+                                    .bold()
+                                
+                            }
+                            
+                            Slider(value: $viewModel.personalStatement, in: 1...5, step: 1)
+                            
+                        }
+                        .padding(8)
+                        .padding(.horizontal, 8)
+                        .foregroundColor(.primary)
+                        .background(Color.accentColor.opacity(0.2))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    
+                    HStack {
+                        VStack {
+                            
+                            HStack {
+                                
                                 Text("Extracurricular Activities")
                                     .bold()
                                 
@@ -117,30 +142,6 @@ struct FindFitView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     
-                    HStack {
-                        VStack {
-                            
-                            HStack {
-                                
-                                Text("Awards")
-                                    .bold()
-                                
-                                Spacer()
-                                
-                                Text(viewModel.getClassificationString(value: viewModel.awards))
-                                    .bold()
-                                
-                            }
-                            
-                            Slider(value: $viewModel.awards, in: 1...5, step: 1)
-                            
-                        }
-                        .padding(8)
-                        .padding(.horizontal, 8)
-                        .foregroundColor(.primary)
-                        .background(Color.accentColor.opacity(0.2))
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    }
                     
                     HStack {
                         VStack {
@@ -171,7 +172,7 @@ struct FindFitView: View {
                 
                 NavigationLink(isActive: $nvLinkActive) {
                     
-                    FindResultView(findVM: viewModel)
+                    FindResultView(viewModel: FindResultVM(score: viewModel.getPrediction()))
                     
                 } label: {
                     

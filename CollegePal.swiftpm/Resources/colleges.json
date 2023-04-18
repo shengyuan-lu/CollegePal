@@ -22,7 +22,7 @@
         "setting": "City",
         "topMajors": ["Film and Television", "Social Sciences", "Engineering"],
         "tuitionFee": 14000,
-        "acceptanceRate": 0.12,
+        "acceptanceRate": 0.086,
         "graduationRate": 0.905,
         "undergraduateEnrollment": 32000,
         "description": "UCLA was founded in 1919 and has since grown to become a large and diverse institution with over 44,000 undergraduate and graduate students enrolled in a wide range of academic programs. The university is known for its strong programs in the arts and humanities, social sciences, life sciences, and engineering, as well as its top-ranked professional schools in law, medicine, and business."
@@ -36,7 +36,7 @@
         "setting": "Suburban",
         "topMajors": ["Engineering", "Physics", "Mathematics"],
         "tuitionFee": 52998,
-        "acceptanceRate": 0.06,
+        "acceptanceRate": 0.04,
         "graduationRate": 0.936,
         "undergraduateEnrollment": 961,
         "description": "The California Institute of Technology is a private research university located in Pasadena, California. It is known for its strong programs in science and engineering and is one of the world's top-ranked universities. With a small undergraduate enrollment of just under 1,000 students, Caltech provides a rigorous and personalized education for its students."
@@ -50,7 +50,7 @@
         "setting": "City",
         "topMajors": ["Business", "Cinematic Arts", "Engineering"],
         "tuitionFee": 60320,
-        "acceptanceRate": 0.11,
+        "acceptanceRate": 0.125,
         "graduationRate": 0.926,
         "undergraduateEnrollment": 20127,
         "description": "The University of Southern California is a private research university located in Los Angeles, California. With over 45,000 students, it is one of the largest private universities in the country. USC is known for its strong programs in business, cinematic arts, and engineering, as well as its top-ranked professional schools in law, medicine, and journalism."
@@ -64,7 +64,7 @@
         "setting": "Urban",
         "topMajors": ["Computer Science", "Business", "Political Science"],
         "tuitionFee": 14305,
-        "acceptanceRate": 0.17,
+        "acceptanceRate": 0.114,
         "graduationRate": 0.910,
         "undergraduateEnrollment": 31281,
         "description": "The University of California, Berkeley is a public research university located in Berkeley, California. It is the flagship institution of the University of California system and is known for its strong programs in computer science, business, and political science, among others. With a large and diverse student body of over 40,000 students, UC Berkeley offers a vibrant and intellectually stimulating environment for learning and research."
@@ -78,7 +78,7 @@
         "setting": "Suburban",
         "topMajors": ["Business", "Computer Science", "Biology"],
         "tuitionFee": 14248,
-        "acceptanceRate": 0.29,
+        "acceptanceRate": 0.21,
         "graduationRate": 0.843,
         "undergraduateEnrollment": 29537,
         "description": "The University of California, Irvine is a public research university located in Irvine, California. It is known for its strong programs in business, computer science, and biology, among others. With a large and diverse student body of over 36,000 students, UC Irvine offers a dynamic and supportive environment for learning and research."
@@ -92,7 +92,7 @@
         "setting": "Suburban",
         "topMajors": ["Agriculture", "Animal Science", "Psychology"],
         "tuitionFee": 14411,
-        "acceptanceRate": 0.43,
+        "acceptanceRate": 0.375,
         "graduationRate": 0.859,
         "undergraduateEnrollment": 30360,
         "description": "The University of California, Davis is a public research university located in Davis, California. It is known for its strong programs in agriculture, animal science, and psychology, among others. With a large and diverse student body of over 39,000 students, UC Davis offers a supportive and collaborative environment for learning and research."
@@ -106,7 +106,7 @@
         "setting": "Suburban",
         "topMajors": ["Physics", "Psychology", "Communication"],
         "tuitionFee": 14668,
-        "acceptanceRate": 0.32,
+        "acceptanceRate": 0.259,
         "graduationRate": 0.815,
         "undergraduateEnrollment": 23861,
         "description": "The University of California, Santa Barbara is a public research university located in Santa Barbara, California. It is known for its strong programs in physics, psychology, and communication, among others. With a beautiful coastal campus and a diverse student body of over 25,000 students, UCSB offers a stimulating and engaging environment for learning and research."
@@ -120,7 +120,7 @@
         "setting": "Suburban",
         "topMajors": ["Computer Science", "Biology", "Psychology"],
         "tuitionFee": 14296,
-        "acceptanceRate": 0.34,
+        "acceptanceRate": 0.237,
         "graduationRate": 0.877,
         "undergraduateEnrollment": 30365,
         "description": "The University of California, San Diego is a public research university located in La Jolla, California. It is known for its strong programs in computer science, biology, and psychology, among others. With a large and diverse student body of over 38,000 students, UC San Diego offers a rigorous and collaborative environment for learning and research."
@@ -134,7 +134,7 @@
         "setting": "Suburban",
         "topMajors": ["Business", "Engineering", "Psychology"],
         "tuitionFee": 14226,
-        "acceptanceRate": 0.52,
+        "acceptanceRate": 0.681,
         "graduationRate": 0.735,
         "undergraduateEnrollment": 22901,
         "description": "The University of California, Riverside is a public research university located in Riverside, California. It is known for its strong programs in business, engineering, and psychology, among others. With a diverse student body of over 25,000 students, UC Riverside offers a welcoming and inclusive environment for learning and research."
@@ -148,7 +148,7 @@
         "setting": "Suburban",
         "topMajors": ["Computer Science", "Biology", "Psychology"],
         "tuitionFee": 14490,
-        "acceptanceRate": 0.51,
+        "acceptanceRate": 0.471,
         "graduationRate": 0.747,
         "undergraduateEnrollment": 18035,
         "description": "The University of California, Santa Cruz is a public research university located in Santa Cruz, California. It is known for its strong programs in computer science, biology, and psychology, among others. With a beautiful coastal campus and a diverse student body of over 19,000 students, UC Santa Cruz offers a supportive and intellectually stimulating environment for learning and research."
@@ -162,7 +162,7 @@
         "setting": "Rural",
         "topMajors": ["Engineering", "Psychology", "Environmental Studies"],
         "tuitionFee": 13760,
-        "acceptanceRate": 0.71,
+        "acceptanceRate": 0.904,
         "graduationRate": 0.692,
         "undergraduateEnrollment": 8756,
         "description": "The University of California, Merced is a public research university located in Merced, California. It is the newest campus of the University of California system and is known for its strong programs in engineering, psychology, and environmental studies, among others. With a small but growing student body of over 9,000 students, UC Merced offers a close-knit and supportive community for learning and research."
@@ -204,7 +204,7 @@
         "setting": "Urban",
         "topMajors": ["Business", "Psychology", "Engineering"],
         "tuitionFee": 7728,
-        "acceptanceRate": 0.34,
+        "acceptanceRate": 0.37,
         "graduationRate": 0.74,
         "undergraduateEnrollment": 30172,
         "description": "San Diego State University is a public university located in San Diego, California. It is part of the California State University system and is known for its strong programs in business, psychology, and engineering, among others. With a diverse student body of over 35,000 students, SDSU offers a rich and dynamic learning environment."
@@ -218,7 +218,7 @@
         "setting": "Rural",
         "topMajors": ["Business", "Psychology", "Mechanical Engineering"],
         "tuitionFee": 7315,
-        "acceptanceRate": 0.72,
+        "acceptanceRate": 0.855,
         "graduationRate": 0.632,
         "undergraduateEnrollment": 16025,
         "description": "California State University, Chico is a public university located in Chico, California. It is part of the California State University system and is known for its strong programs in business, psychology, and mechanical engineering, among others. With a small and tight-knit student body of around 17,000 students, CSU Chico offers a close and supportive learning community."
@@ -232,7 +232,7 @@
         "setting": "Urban",
         "topMajors": ["Business", "Engineering", "Psychology"],
         "tuitionFee": 7892,
-        "acceptanceRate": 0.53,
+        "acceptanceRate": 0.844,
         "graduationRate": 0.613,
         "undergraduateEnrollment": 30383,
         "description": "San Jose State University is a public research university located in San Jose, California. With over 35,000 students, it is the oldest public university on the West Coast and is known for its strong programs in business, engineering, and psychology, among others. The university is situated in the heart of Silicon Valley, providing students with ample opportunities for internships and networking."
@@ -246,7 +246,7 @@
         "setting": "Suburban",
         "topMajors": ["Engineering", "Agriculture", "Architecture"],
         "tuitionFee": 9492,
-        "acceptanceRate": 0.31,
+        "acceptanceRate": 0.33,
         "graduationRate": 0.769,
         "undergraduateEnrollment": 21799,
         "description": "California Polytechnic State University, also known as Cal Poly, is a public research university located in San Luis Obispo, California. It is known for its strong programs in engineering, agriculture, and architecture, among others. With a focus on hands-on learning and real-world experience, Cal Poly provides students with a rigorous education that prepares them for the workforce. The university also boasts a beautiful campus and a vibrant student community."
@@ -260,7 +260,7 @@
         "setting": "City",
         "topMajors": ["Business Administration", "Psychology", "Biology"],
         "tuitionFee": 7000,
-        "acceptanceRate": 0.65,
+        "acceptanceRate": 0.929,
         "graduationRate": 0.483,
         "undergraduateEnrollment": 23818,
         "description": "San Francisco State University is a public university located in the heart of San Francisco, California. It was founded in 1899 as a teacher training school and has since grown to become a comprehensive university offering over 118 undergraduate and graduate degree programs. SFSU is known for its commitment to social justice, diversity, and sustainability, and its location in one of the world's most vibrant and innovative cities offers students unique opportunities to engage with a wide range of communities and industries."
@@ -274,7 +274,7 @@
         "setting": "City",
         "topMajors": ["Nursing", "Psychology", "Business Administration"],
         "tuitionFee": 52000,
-        "acceptanceRate": 0.67,
+        "acceptanceRate": 0.709,
         "graduationRate": 0.738,
         "undergraduateEnrollment": 6823,
         "description": "The University of San Francisco is a private Jesuit Catholic university located in the heart of San Francisco, California. Founded in 1855, it is one of the oldest universities in California and has a long history of social justice activism and community engagement. USF offers over 100 undergraduate and graduate programs in fields ranging from nursing and education to business and law, and its commitment to interdisciplinary education and global citizenship prepares students to become ethical leaders and engaged citizens in the 21st century."

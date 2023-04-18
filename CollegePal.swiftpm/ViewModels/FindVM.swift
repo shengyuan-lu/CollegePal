@@ -14,7 +14,7 @@ class FindVM: ObservableObject {
     @Published var gpa: Double = 3.6
     @Published var standardizedTest: Double = 1300
     @Published var extracurricular: Double = 3
-    @Published var awards: Double = 3
+    @Published var personalStatement: Double = 3
     @Published var lor: Double = 3
     
     let classification = ["N/A", "Standard", "Impressive", "Outstanding", "Exceptional"]
@@ -22,7 +22,6 @@ class FindVM: ObservableObject {
     init() {}
     
     func getPrediction() -> Double {
-        
         
         do {
         
@@ -71,7 +70,7 @@ class FindVM: ObservableObject {
         value += getGPANormalized() * 0.4
         value += getStandardizedTestNormalized() * 0.1
         value += getExtracurricularNormalized() * 0.2
-        value += getRewardNormalized() * 0.2
+        value += getPersonalStatementNormalized() * 0.2
         value += getLorNormalized() * 0.1
         
         if value > 1 {
@@ -156,9 +155,9 @@ class FindVM: ObservableObject {
     }
     
     
-    func getRewardNormalized() -> Double {
+    func getPersonalStatementNormalized() -> Double {
         
-        switch (Int(awards)) {
+        switch (Int(personalStatement)) {
         case 0:
             return 0
         case 1:
