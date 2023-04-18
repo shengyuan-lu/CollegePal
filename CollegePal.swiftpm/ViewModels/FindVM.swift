@@ -46,15 +46,17 @@ class FindVM: ObservableObject {
                 return admission_rate
             }
             
-        } catch {
-            
-            // print("Prediction Not Successful, Old Heuristic Used")
-            
-            return 1 - getNormalizedScore()
-            
+        } catch {}
+        
+        var admission_rate = 1 - getNormalizedScore()
+        
+        if admission_rate > 0.95 {
+            admission_rate = 0.95
+        } else if admission_rate < 0.1 {
+            admission_rate = 0.1
         }
         
-        return 1 - getNormalizedScore()
+        return admission_rate
         
     }
     
