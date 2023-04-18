@@ -70,12 +70,6 @@ class FindFitOutput : MLFeatureProvider {
 class FindFit {
     let model: MLModel
 
-    /// URL of model assuming it was installed in the same bundle as this class
-    class var urlOfModelInThisBundle : URL {
-        let bundle = Bundle(for: self)
-        return bundle.url(forResource: "FindFit", withExtension:"mlmodelc")!
-    }
-
     /**
         Construct FindFit instance with an existing MLModel object.
 
@@ -87,27 +81,6 @@ class FindFit {
     */
     init(model: MLModel) {
         self.model = model
-    }
-
-    /**
-        Construct FindFit instance by automatically loading the model from the app's bundle.
-    */
-    @available(*, deprecated, message: "Use init(configuration:) instead and handle errors appropriately.")
-    convenience init() {
-        try! self.init(contentsOf: type(of:self).urlOfModelInThisBundle)
-    }
-
-    /**
-        Construct a model with configuration
-
-        - parameters:
-           - configuration: the desired model configuration
-
-        - throws: an NSError object that describes the problem
-    */
-    @available(macOS 10.14, iOS 12.0, tvOS 12.0, watchOS 5.0, *)
-    convenience init(configuration: MLModelConfiguration) throws {
-        try self.init(contentsOf: type(of:self).urlOfModelInThisBundle, configuration: configuration)
     }
 
     /**
@@ -133,33 +106,6 @@ class FindFit {
     @available(macOS 10.14, iOS 12.0, tvOS 12.0, watchOS 5.0, *)
     convenience init(contentsOf modelURL: URL, configuration: MLModelConfiguration) throws {
         try self.init(model: MLModel(contentsOf: modelURL, configuration: configuration))
-    }
-
-    /**
-        Construct FindFit instance asynchronously with optional configuration.
-
-        Model loading may take time when the model content is not immediately available (e.g. encrypted model). Use this factory method especially when the caller is on the main thread.
-
-        - parameters:
-          - configuration: the desired model configuration
-          - handler: the completion handler to be called when the model loading completes successfully or unsuccessfully
-    */
-    @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
-    class func load(configuration: MLModelConfiguration = MLModelConfiguration(), completionHandler handler: @escaping (Swift.Result<FindFit, Error>) -> Void) {
-        return self.load(contentsOf: self.urlOfModelInThisBundle, configuration: configuration, completionHandler: handler)
-    }
-
-    /**
-        Construct FindFit instance asynchronously with optional configuration.
-
-        Model loading may take time when the model content is not immediately available (e.g. encrypted model). Use this factory method especially when the caller is on the main thread.
-
-        - parameters:
-          - configuration: the desired model configuration
-    */
-    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
-    class func load(configuration: MLModelConfiguration = MLModelConfiguration()) async throws -> FindFit {
-        return try await self.load(contentsOf: self.urlOfModelInThisBundle, configuration: configuration)
     }
 
     /**

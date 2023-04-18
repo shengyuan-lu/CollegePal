@@ -27,18 +27,35 @@ class FindVM: ObservableObject {
         do {
         
             let config = MLModelConfiguration()
-            let model = try FindFit(configuration: config)
             
-            let prediction = try model.prediction(normalized_score: self.getNormalizedScore())
+            if let url = Bundle.main.url(forResource: "FindFit", withExtension:"mlmodelc") {
+                let model = try? FindFit(contentsOf: url, configuration: config)
+                
+                let prediction = try model!.prediction(normalized_score: self.getNormalizedScore())
+                
+                // print("Prediction Successful!")
+                
+                var admission_rate = prediction.admissions_rate
+                
+                if admission_rate > 0.95 {
+                    admission_rate = 0.95
+                } else if admission_rate < 0.1 {
+                    admission_rate = 0.1
+                }
+                
+                return admission_rate
+            }
             
-            return prediction.admissions_rate
-
         } catch {
+            
+            // print("Prediction Not Successful, Old Heuristic Used")
+            
+            return 1 - getNormalizedScore()
             
         }
         
-
-        return 0.0
+        return 1 - getNormalizedScore()
+        
     }
     
     func getClassificationString(value: Double) -> String {
