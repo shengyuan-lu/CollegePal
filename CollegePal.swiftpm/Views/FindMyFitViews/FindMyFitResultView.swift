@@ -36,7 +36,7 @@ struct FindMyFitResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreListView(colleges: viewModel.reachSchools)
+                        CollegeExploreGridView(colleges: viewModel.reachSchools)
 
                     }
                     
@@ -49,7 +49,7 @@ struct FindMyFitResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreListView(colleges: viewModel.matchSchools)
+                        CollegeExploreGridView(colleges: viewModel.matchSchools)
                         
                     }
                     
@@ -61,7 +61,7 @@ struct FindMyFitResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreListView(colleges: viewModel.safetySchools)
+                        CollegeExploreGridView(colleges: viewModel.safetySchools)
                     }
 
                 }

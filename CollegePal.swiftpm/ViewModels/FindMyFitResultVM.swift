@@ -58,7 +58,7 @@ class FindMyFitResultVM: ObservableObject {
         for c in self.colleges {
             
             
-            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 4 {
+            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 3 {
                 
                 schools.append(c)
                 alreadyAdded.insert(c.name)
@@ -91,7 +91,7 @@ class FindMyFitResultVM: ObservableObject {
         
         for c in self.colleges {
             
-            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 4 {
+            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 3 {
                 schools.append(c)
                 alreadyAdded.insert(c.name)
             }
@@ -118,7 +118,7 @@ class FindMyFitResultVM: ObservableObject {
         
         for c in self.colleges {
             
-            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 4 {
+            if c.acceptanceRate >= highRange && c.acceptanceRate <= lowRange && !alreadyAdded.contains(c.name) && schools.count < 3 {
                 schools.append(c)
                 alreadyAdded.insert(c.name)
             }
