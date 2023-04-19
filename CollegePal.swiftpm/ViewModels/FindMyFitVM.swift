@@ -1,5 +1,5 @@
 //
-//  FindVM.swift
+//  FindMyFitVM.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/17/23.
@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 import CoreML
 
-class FindVM: ObservableObject {
+class FindMyFitVM: ObservableObject {
     
     @Published var gpa: Double = 3.6
     @Published var standardizedTest: Double = 1300
@@ -38,8 +38,8 @@ class FindVM: ObservableObject {
                 
                 if admission_rate > 0.95 {
                     admission_rate = 0.95
-                } else if admission_rate < 0.1 {
-                    admission_rate = 0.1
+                } else if admission_rate < 0.05 {
+                    admission_rate = 0.05
                 }
                 
                 return admission_rate

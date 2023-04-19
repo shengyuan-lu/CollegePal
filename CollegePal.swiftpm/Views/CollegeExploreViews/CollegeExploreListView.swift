@@ -14,7 +14,7 @@ struct CollegeExploreListView: View {
     var body: some View {
         
         ScrollView(showsIndicators: false) {
-            ForEach(colleges, id: \.name) { college in
+            ForEach(colleges, id: \.id) { college in
                 
                 NavigationLink {
                     CollegeExploreDetailView(college: college)

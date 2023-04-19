@@ -1,5 +1,5 @@
 //
-//  FindResultVM.swift
+//  FindMyFitResultVM.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/18/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FindResultVM: ObservableObject {
+class FindMyFitResultVM: ObservableObject {
     
     @Published var reachSchools: [CollegeStruct] = [CollegeStruct]()
     @Published var matchSchools: [CollegeStruct] = [CollegeStruct]()
@@ -108,7 +108,7 @@ class FindResultVM: ObservableObject {
     private func findSafety() {
         
         var lowRange: Double = self.score + 0.2
-        var highRange: Double = self.score
+        let highRange: Double = self.score
         var schools = [CollegeStruct]()
         
         if lowRange > 1 {

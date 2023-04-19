@@ -1,5 +1,5 @@
 //
-//  FindResultView.swift
+//  FindMyFitResultView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/18/23.
@@ -9,9 +9,9 @@ import SwiftUI
 
 
 
-struct FindResultView: View {
+struct FindMyFitResultView: View {
     
-    let viewModel: FindResultVM
+    let viewModel: FindMyFitResultVM
     
     var body: some View {
         
@@ -36,7 +36,7 @@ struct FindResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreGridView(colleges: viewModel.reachSchools)
+                        CollegeExploreListView(colleges: viewModel.reachSchools)
 
                     }
                     
@@ -49,7 +49,7 @@ struct FindResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreGridView(colleges: viewModel.matchSchools)
+                        CollegeExploreListView(colleges: viewModel.matchSchools)
                         
                     }
                     
@@ -61,21 +61,17 @@ struct FindResultView: View {
                             .font(.title)
                             .foregroundColor(.accentColor)
                             .bold()
-                        CollegeExploreGridView(colleges: viewModel.safetySchools)
+                        CollegeExploreListView(colleges: viewModel.safetySchools)
                     }
 
                 }
 
             }
             
-            
         }
         .navigationTitle("Colleges For You")
         .navigationBarTitleDisplayMode(.large)
         .padding(20)
-        
-        
-        
-        
+    
     }
 }

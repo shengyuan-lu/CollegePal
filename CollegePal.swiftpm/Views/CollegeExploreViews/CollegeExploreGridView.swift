@@ -16,7 +16,7 @@ struct CollegeExploreGridView: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 350, maximum: 800))], spacing: 16) {
                 
-                ForEach(colleges, id: \.name) { college in
+                ForEach(colleges, id: \.id) { college in
                     
                     NavigationLink {
                         

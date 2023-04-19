@@ -36,7 +36,7 @@ struct MainNavigationView: View {
                 }
                 
                 Section(header: Text("Find")) {
-                    NavigationLink(destination: FindFitView()) {
+                    NavigationLink(destination: FindMyFitView()) {
                         Label("Find My Fit", systemImage: "magnifyingglass")
                     }
                 }

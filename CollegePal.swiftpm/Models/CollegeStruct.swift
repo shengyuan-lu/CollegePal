@@ -24,6 +24,8 @@ struct CollegeStruct: Decodable {
     let undergraduateEnrollment: Int
     let description: String
     
+    let id = UUID()
+    
     func getAcceptanceRateInString() -> String {
         return "\(Int(acceptanceRate * 100))%"
     }

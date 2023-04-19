@@ -1,5 +1,5 @@
 //
-//  FindFitView.swift
+//  FindMyFitView.swift
 //  
 //
 //  Created by Shengyuan Lu on 4/16/23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct FindFitView: View {
+struct FindMyFitView: View {
     
-    @ObservedObject var viewModel = FindVM()
+    @ObservedObject var viewModel = FindMyFitVM()
     
     @State var showInfo = false
     
@@ -172,7 +172,7 @@ struct FindFitView: View {
                 
                 NavigationLink(isActive: $nvLinkActive) {
                     
-                    FindResultView(viewModel: FindResultVM(score: viewModel.getPrediction()))
+                    FindMyFitResultView(viewModel: FindMyFitResultVM(score: viewModel.getPrediction()))
                     
                 } label: {
                     
@@ -224,8 +224,8 @@ struct FindFitView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct FindMyFitView_Previews: PreviewProvider {
     static var previews: some View {
-        FindFitView()
+        FindMyFitView()
     }
 }
