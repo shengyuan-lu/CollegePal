@@ -11,13 +11,15 @@ struct IntroductionView: View {
     var body: some View {
         
         List {
-            Section {
+            
+            Section(header: Text("")) {
                 Image("Banner")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
+
             }
-            
+
             Section(header: Text("Background Story")) {
                 Text("As an international student, the American college application process was one of the most challenging times of my life. I felt lost and overwhelmed, with little guidance or support. Despite my best efforts, I struggled to navigate the complexities of the system. I knew that I wasn't alone. Many students, especially those who are first-generation and underrepresented, face even more challenges due to limited resources availble to them.")
                     .padding(.vertical, 8)

@@ -11,11 +11,11 @@ import CoreML
 
 class FindMyFitVM: ObservableObject {
     
-    @Published var gpa: Double = 3.6
+    @Published var gpa: Double = 3.7
     @Published var standardizedTest: Double = 1300
     @Published var extracurricular: Double = 3
     @Published var personalStatement: Double = 3
-    @Published var lor: Double = 3
+    @Published var lor: Double = 2
     
     let classification = ["N/A", "Standard", "Impressive", "Outstanding", "Exceptional"]
     
@@ -85,21 +85,21 @@ class FindMyFitVM: ObservableObject {
         var value: Double = 0
         
         if gpa <= 2.0 {
-            value += 0.1 * (gpa - 0) / 2.0
+            value += 0.05 * (gpa - 0) / 2.0
         }
         
         else if gpa > 2.0 && gpa <= 3.0 {
-            value += 0.1
-            value += 0.2 * (gpa - 2) / 1
+            value += 0.05
+            value += 0.1 * (gpa - 2) / 1
         }
         
         else if gpa > 3.0 && gpa <= 3.5 {
-            value += 0.3
+            value += 0.15
             value += 0.3 * (gpa - 3) / 0.5
         }
         
         else if gpa > 3.5 && gpa <= 4.0 {
-            value += 0.6
+            value += 0.45
             value += 0.6 * (gpa - 3.5) / 0.5
         }
         

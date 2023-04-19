@@ -11,5 +11,7 @@ struct ChecklistItem: Identifiable {
     let id = UUID()
     let name: String
     let description: String
+    let timeline: String
+    let impact: String
     var isChecked = false
 }

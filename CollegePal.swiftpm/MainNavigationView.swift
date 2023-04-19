@@ -15,6 +15,14 @@ struct MainNavigationView: View {
             
             List {
                 
+                Section(header: Text("")) {
+                    Image("Banner")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+
+                }
+                
                 Section(header: Text("Introduction")) {
                     
                     NavigationLink(destination: IntroductionView()) {

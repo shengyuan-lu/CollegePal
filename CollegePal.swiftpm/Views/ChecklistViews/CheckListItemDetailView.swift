@@ -40,6 +40,36 @@ struct ChecklistItemDetailView: View {
             
             Section {
                 
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Timeline Suggestions")
+                        .bold()
+                    
+                    Divider()
+                    
+                    Text(item.timeline)
+                    
+                }
+                .padding(8)
+                
+            }
+            
+            Section {
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Impact On Your Application")
+                        .bold()
+                    
+                    Divider()
+                    
+                    Text(item.impact)
+                    
+                }
+                .padding(8)
+                
+            }
+            
+            Section {
+                
                 HStack {
                     
                     Button(action: {

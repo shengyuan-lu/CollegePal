@@ -19,17 +19,17 @@ struct ChecklistView: View {
         
         List {
             
+            Section(header: Text("")) {
+                Image("Checklist Banner")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            
             Section(header: Text("Instruction")) {
                 
-                VStack {
-                    Image("Checklist Banner")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                    
-                    Text("Understand the components that make up a college application is essential to navigate your application season. Please check the boxes below to learn about each component and mark it off once you've read and understood the descriptions.")
-                        .padding(.top, 6)
-                }
+                Text("Understand the components that make up a college application is essential to navigate your application season. Please check the boxes below to learn about each component and mark it off once you've read and understood the descriptions.")
+                    .padding(.top, 6)
                 
             }
             

@@ -20,14 +20,10 @@ struct FindMyFitResultView: View {
             
             VStack(alignment: .leading, spacing: 20) {
                 
-                VStack(alignment: .leading) {
-                    Text("Based On Machine Learning")
-                        .font(.title3)
-                        .bold()
-                    
-                    Divider()
-                }
-
+                Text("*Suggested Based On Machine Learning For Reference Purposes Only")
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.secondary)
                 
                 if viewModel.hasReachSchools() {
                     

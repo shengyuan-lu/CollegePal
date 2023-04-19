@@ -30,7 +30,7 @@ struct FindMyFitView: View {
                     
                 }
                 
-                Text("CollegePal can help you by utilizing machine learning to suggest colleges from each category based on your self-assessment below.")
+                Text("CollegePal leverages the power of machine learning to offer personalized college recommendations tailored to you. By analyzing your self-assessment, CollegePal can suggest colleges from various categories, making the college search process more efficient and effective.")
                     .padding(.vertical, 4)
             }
             
@@ -198,7 +198,7 @@ struct FindMyFitView: View {
         }
         .navigationTitle("Find My Fit")
         .alert(isPresented: $showInfo) {
-            Alert(title: Text("Information"), message: Text("Please note that both the training data and all algorithms associated for this prototype CoreML model is entirely fictional and intended only for demonstration purposes."), dismissButton: .default(Text("Got it!")))
+            Alert(title: Text("Information"), message: Text("Please note that both the training data and all algorithms used for this prototype CoreML model is entirely fictional and intended only for demonstration purposes."), dismissButton: .default(Text("Got it!")))
         }
         .toolbar {
             
