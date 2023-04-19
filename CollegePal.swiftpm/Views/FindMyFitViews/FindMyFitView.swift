@@ -13,8 +13,6 @@ struct FindMyFitView: View {
     
     @State var showInfo = false
     
-    @State var nvLinkActive = false
-    
     var body: some View {
         
         List {
@@ -170,36 +168,30 @@ struct FindMyFitView: View {
                 }
                 .padding(.vertical, 8)
                 
-                NavigationLink(isActive: $nvLinkActive) {
+                NavigationLink {
                     
                     FindMyFitResultView(viewModel: FindMyFitResultVM(score: viewModel.getPrediction()))
                     
                 } label: {
                     
-                    Button(action: {
-                        nvLinkActive.toggle()
-                    }) {
+                    HStack {
+                        Spacer()
                         
-                        HStack {
-                            Spacer()
-                            
-                            Image(systemName: "graduationcap.fill")
-                            
-                            Text("Find My Colleges")
-                                .bold()
-                            
-                            Spacer()
-                        }
-                        .padding(16)
-                        .padding(.horizontal, 16)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        Image(systemName: "graduationcap.fill")
                         
+                        Text("Find My Colleges")
+                            .bold()
+                        
+                        Spacer()
                     }
-                    .buttonStyle(.plain)
+                    .padding(16)
+                    .padding(.horizontal, 16)
+                    .foregroundColor(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                 }
+                .buttonStyle(.plain)
 
             }
             

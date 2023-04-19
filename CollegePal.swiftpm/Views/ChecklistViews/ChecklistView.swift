@@ -30,7 +30,7 @@ struct ChecklistView: View {
                     Text("Understand the components that make up a college application is essential to navigate your application season. Please check the boxes below to learn about each component and mark it off once you've read and understood the descriptions.")
                         .padding(.top, 6)
                 }
-
+                
             }
             
             Section(header: Text("Check List")) {
@@ -64,40 +64,29 @@ struct ChecklistView: View {
             
             Section {
                 
-                NavigationLink(isActive: $submitted) {
+                NavigationLink {
                     
                     ChecklistSubmittedView()
                     
                 } label: {
                     
-                    Button {
-                        if viewModel.isAllItemsChecked() {
-                            
-                            submitted.toggle()
-                            
-                        }
-                    } label: {
+                    HStack {
+                        Spacer()
                         
-                        HStack {
-                            Spacer()
-                            
-                            Image(systemName: "paperplane.fill")
-                            Text("Finish Checklist")
-                                .bold()
-                            
-                            Spacer()
-                        }
-                        .padding(16)
-                        .padding(.horizontal, 16)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        Image(systemName: "paperplane.fill")
+                        Text("Finish Checklist")
+                            .bold()
                         
+                        Spacer()
                     }
-                    .buttonStyle(.plain)
-                   
+                    .padding(16)
+                    .padding(.horizontal, 16)
+                    .foregroundColor(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                 }
+                .buttonStyle(.plain)
                 .disabled(!viewModel.isAllItemsChecked())
                 
             }

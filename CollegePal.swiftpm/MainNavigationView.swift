@@ -54,6 +54,7 @@ struct MainNavigationView: View {
             .navigationTitle("CollegePal")
             
         }
+        .navigationViewStyle(.stack)
     }
 }
 
