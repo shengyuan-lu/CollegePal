@@ -1,6 +1,6 @@
 # CollegePal-WWDC23
 
-Your Friendly And Assistant For College Application! 
+Your Personalized Assistant For College Application! 
 
 ![Banner](https://user-images.githubusercontent.com/70995597/233450449-965c5002-080b-44ee-9e10-1b2ca04cb413.png)
 
